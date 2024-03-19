@@ -13,7 +13,7 @@ class AccuracyCheck
   def export_chart(dirname)
     @res_bodies = accuracy_check_query.res_bodies
     csv_chart   = chart_drawer.csv
-    File.open(filename(dirname), 'w') { |f| f.puts(csv_chart) }
+    File.open(filename(dirname), 'w') { _1.puts(csv_chart) }
   end
 
   private
