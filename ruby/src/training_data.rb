@@ -8,7 +8,7 @@ class TrainingData
   end
 
   def export(dirname)
-    File.open(filename(dirname), 'w') { |f| f.write(to_json(training_data)) }
+    IO.write(filename(dirname), to_json(training_data))
   end
 
   private

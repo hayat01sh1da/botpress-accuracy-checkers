@@ -6,7 +6,7 @@ RSpec.describe ChartDrawer do
   let(:csv_path)     { Rails.root.join('csv', 'test_data.csv') }
   let(:json_path)    { Rails.root.join('json', 'res_bodies.json') }
   let(:test_data)    { CSV.read(csv_path) }
-  let(:res_bodies)   { File.open(json_path) { |f| f.read }.then { |json| JSON.parse(json) } }
+  let(:res_bodies)   { IO.read(json_path).then { |json| JSON.parse(json) } }
 
   it 'returns the same number of rows in the CSV chart as that in the test data' do
     expect(test_data.size).to eq(csv_chart.split(/\n/).size)
