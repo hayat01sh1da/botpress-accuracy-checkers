@@ -1,0 +1,18 @@
+# Ruby on Rails App
+
+ruby-on-rails/.env
+ruby-on-rails/.gitignore
+ruby-on-rails/log/
+ruby-on-rails/tmp/
+
+# Ruby
+
+ruby/test/tmp
+
+# Python
+
+python/src/__pycache__/
+python/src/lib/__pycache__/
+python/src/queries/__pycache__/
+python/test/__pycache__/
+python/test/tmp/
