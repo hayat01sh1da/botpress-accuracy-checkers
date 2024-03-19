@@ -1,0 +1,5 @@
+src/__pycache__/
+src/lib/__pycache__/
+src/queries/__pycache__/
+test/__pycache__/
+test/tmp/
