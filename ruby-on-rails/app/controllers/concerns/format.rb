@@ -26,7 +26,7 @@ module Format
       if format[:data][:answers][:ja].last == training_datum['Answer']
         format[:data][:questions][:ja] << training_datum['Question']
       else
-        format = template
+        format      = template
         format[:id] = training_datum['ID']
         format[:data][:questions][:ja] << training_datum['Question']
         format[:data][:answers][:ja] << training_datum['Answer']
