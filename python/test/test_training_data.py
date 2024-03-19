@@ -9,7 +9,7 @@ from test_application import TestApplication
 class TestTrainingData(TestApplication):
     def setUp(self):
         super().setUp()
-        training_data = os.path.join('csv', 'training_data.csv')
+        training_data = os.path.join('..', 'csv', 'training_data.csv')
         self.training_data = TrainingData(training_data)
 
     def test_export(self):

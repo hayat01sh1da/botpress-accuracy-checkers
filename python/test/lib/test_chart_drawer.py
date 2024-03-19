@@ -13,8 +13,8 @@ from test_application import TestApplication
 class TestChartDrawer(TestApplication):
     def setUp(self):
         super().setUp()
-        self.csv_path   = os.path.join('csv', 'test_data.csv')
-        json_path       = os.path.join('json', 'res_bodies.json')
+        self.csv_path   = os.path.join('..', 'csv', 'test_data.csv')
+        json_path       = os.path.join('..', 'json', 'res_bodies.json')
         self.res_bodies = None
         with open(json_path) as f:
             self.res_bodies = json.loads(f.read())

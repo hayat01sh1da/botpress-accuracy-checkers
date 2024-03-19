@@ -9,7 +9,7 @@
 #     host                  = 'oasist-botpress-server.herokuapp.com'
 #     bot_id                = 'sample-bot'
 #     user_id               = 'oasist'
-#     @csv_path             = File.join('csv', 'test_data.csv')
+#     @csv_path             = File.join('..', 'csv', 'test_data.csv')
 #     @accuracy_check_query = ::Queries::AccuracyCheckQuery.new(scheme, host, bot_id, user_id, csv_path)
 #   end
 

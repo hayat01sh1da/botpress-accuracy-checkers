@@ -13,7 +13,7 @@
 #         host                = 'oasist-botpress-server.herokuapp.com'
 #         bot_id              = 'sample-bot'
 #         user_id             = 'oasist'
-#         test_data           = os.path.join('csv', 'test_data.csv')
+#         test_data           = os.path.join('..', 'csv', 'test_data.csv')
 #         self.accuracy_check = AccuracyCheck(scheme, host, bot_id, user_id, test_data)
 
 #     def test_export_chart(self):

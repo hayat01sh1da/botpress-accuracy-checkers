@@ -15,7 +15,7 @@
 #         host                      = 'oasist-botpress-server.herokuapp.com'
 #         bot_id                    = 'sample-bot'
 #         user_id                   = 'oasist'
-#         self.csv_path             = os.path.join('csv', 'test_data.csv')
+#         self.csv_path             = os.path.join('..', 'csv', 'test_data.csv')
 #         self.accuracy_check_query = AccuracyCheckQuery(scheme, host, bot_id, user_id, self.csv_path)
 
 #     def test_csv(self):

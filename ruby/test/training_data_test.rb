@@ -5,7 +5,7 @@ require_relative '../src/lib/format'
 class TrainingDataTest < ApplicationTest
   def setup
     super
-    training_data  = File.join('csv', 'training_data.csv')
+    training_data  = File.join('..', 'csv', 'training_data.csv')
     @training_data = TrainingData.new(training_data)
   end
 
