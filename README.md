@@ -11,6 +11,6 @@
 
 ## 3. READMEs
 
-- [Ruby on Rails App](./ruby-on-rails/README.md)
-- [Ruby Script](./ruby/README.md)
-- [Python Script](./python/README.md)
+- [Ruby on Rails](./ruby-on-rails/README.md)
+- [Ruby](./ruby/README.md)
+- [Python](./python/README.md)
