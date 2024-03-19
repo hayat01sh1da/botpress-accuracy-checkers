@@ -1,0 +1,31 @@
+<h1>Create Score Chart</h1>
+<%= form_with url: score_chart_url do |f| %>
+<%= render 'shared/errors', object: @score_chart_form %>
+  <div class="form-item">
+    <p><strong><%= f.label :scheme %></strong></p>
+    <p><%= f.select :scheme, ['https', 'http'], { selected: 'https' } %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :host %></strong></p>
+    <p><%= f.text_field :host, size: 50, placeholder: 'sample.com' %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :bot_id %></strong></p>
+    <p><%= f.text_field :bot_id, size: 30, placeholder: 'sample-bot' %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :user_id %></strong></p>
+    <p><%= f.text_field :user_id, size: 30, placeholder: 'sample-user' %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :access_token %></strong></p>
+    <p><%= f.text_area :access_token, size: '100x5', placeholder: 'Bearer ...' %></p>
+  </div>
+  <div class="form-item">
+    <p><strong><%= f.label :test_data %></strong></p>
+    <p><%= f.file_field :test_data, accept: '.csv' %></p>
+  </div>
+  <div class="form-item">
+    <p><%= f.submit 'Create Score Chart', class: 'btn btn-primary' %></p>
+  </div>
+<% end %>

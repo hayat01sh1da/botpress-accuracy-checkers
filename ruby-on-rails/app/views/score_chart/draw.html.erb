@@ -1,0 +1,21 @@
+<h1>Accuracy Score Chart</h1>
+<p><%= link_to 'Download Score Chart', score_chart_download_url, class: 'btn btn-primary' %></p>
+<div class="scroll-table">
+  <table>
+    <% @chart&.each do |chart| %>
+      <tr>
+        <% chart&.each do |row| %>
+          <th class=<%= accuracy(row) %>><%= row %></th>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<div class="annotaion">
+  <h2>Annotation</h2>
+  <p class="excellent">Greater than or equal to 70.0%</p>
+  <p class="good">Greater than or equal to 50.0% and less than 70.0%</p>
+  <p class="bad">Greater than or equal to 30.0% and less than 50.0%</p>
+  <p class="useless">Greater than or equal to 0.1% and less than 30.0%</p>
+</div>
