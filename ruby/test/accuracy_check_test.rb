@@ -14,7 +14,7 @@
 
 #   def test_export_chart
 #     accuracy_check.export_chart(dirname)
-#     assert Dir[File.dirname(__FILE__) + '/tmp/accuracy_score_chart*.csv'].any?
+#     assert Dir[File.join(dirname, 'accuracy_score_chart*.json')].any?
 #   end
 
 #   def teardown

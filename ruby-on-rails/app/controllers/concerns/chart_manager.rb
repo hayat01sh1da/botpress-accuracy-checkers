@@ -19,6 +19,6 @@ module ChartManager
   end
 
   def clear_tmp_charts
-    FileUtils.rm_f(tmp_charts) if tmp_charts.any?
+    FileUtils.rm_rf(tmp_charts) if tmp_charts.any?
   end
 end

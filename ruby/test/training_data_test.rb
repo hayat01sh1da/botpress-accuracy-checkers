@@ -11,7 +11,7 @@ class TrainingDataTest < ApplicationTest
 
   def test_export
     training_data.export(dirname)
-    assert Dir[File.dirname(__FILE__) + '/tmp/training_data*.json'].any?
+    assert(Dir[File.join(dirname, 'training_data*.json')].any?)
   end
 
   def teardown

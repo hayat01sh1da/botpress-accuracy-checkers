@@ -7,9 +7,9 @@ class ApplicationTest < Minitest::Test
   end
 
   def teardown
-    files_to_remove = Dir[File.dirname(__FILE__) + '/tmp/*']
-    FileUtils.rm_f(files_to_remove) if files_to_remove.any?
-    Dir.delete(File.dirname(__FILE__) + '/tmp/')
+    files_to_remove = Dir[File.join(dirname, '*')]
+    FileUtils.rm_rf(files_to_remove) if files_to_remove.any?
+    Dir.delete(dirname)
   end
 
   private

@@ -5,7 +5,7 @@ sys.path.append('./src/lib')
 from training_data import TrainingData
 
 csv_training_data = os.path.join('..', 'csv', 'training_data.csv')
-dirname           = '../json'
+dirname           = os.path.join('..', 'json')
 
 training_data = TrainingData(csv_training_data)
 training_data.export(dirname)
