@@ -11,20 +11,20 @@ class AccuracyCheck
   end
 
   def export_chart(dirname)
-    @res_bodies = accuracy_check_query.res_bodies
-    csv_chart   = chart_drawer.csv
+    res_bodies = accuracy_check_query.res_bodies
+    csv_chart   = chart_drawer(res_bodies).csv
     File.open(filename(dirname), 'w') { _1.puts(csv_chart) }
   end
 
   private
 
-  attr_reader :scheme, :host, :bot_id, :user_id, :test_data, :res_bodies
+  attr_reader :scheme, :host, :bot_id, :user_id, :test_data
 
   def accuracy_check_query
     @accuracy_check_query ||= ::Lib::AccuracyCheckQuery.new(scheme, host, bot_id, user_id, test_data)
   end
 
-  def chart_drawer
+  def chart_drawer(res_bodies)
     @chart_drawer ||= ::Lib::ChartDrawer.new(test_data, res_bodies)
   end
 
