@@ -1,0 +1,1160 @@
+[
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.5325220075785276,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA001",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.4674779924214723,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "GitHubは分散型バージョン管理システムでリポジトリを複数持つことができる一歩、SVNは単一のリポジトリしか持てないので集中型バージョン管理システムと呼ばれています。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA010",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "Ruby on RailsおよびErlangで記述されており、アメリカのカリフォルニア州サンフランシスコ市に拠点を置くGitHub社によって保守されています。主な開発者はクリス・ワンストラス、P.J.ハイエット、トム・プレストン・ワーナーです。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 1,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "Ruby on RailsおよびErlangで記述されており、アメリカのカリフォルニア州サンフランシスコ市に拠点を置くGitHub社によって保守されています。主な開発者はクリス・ワンストラス、P.J.ハイエット、トム・プレストン・ワーナーです。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA002",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA001",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "メールアドレス、パスワードを設定してアカウントを作成すれば誰でも無料で利用可能です。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.5974100169484843,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "メールアドレス、パスワードを設定してアカウントを作成すれば誰でも無料で利用可能です。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA003",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.4025899830515157,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "メールアドレス、ユーザー名は他のユーザーと重複しないものを登録する必要があります。また、パスワードは一定以上の強度の文字列の組合せで設定してください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA004",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "メールアドレス、パスワードを設定してアカウントを作成すれば誰でも無料で利用可能です。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.547266880309986,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "メールアドレス、パスワードを設定してアカウントを作成すれば誰でも無料で利用可能です。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA003",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.4527331196900139,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "メールアドレス、ユーザー名は他のユーザーと重複しないものを登録する必要があります。また、パスワードは一定以上の強度の文字列の組合せで設定してください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA004",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "ログイン画面の「パスワードを忘れた」よりパスワードの再発行を行ってください。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 1,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ログイン画面の「パスワードを忘れた」よりパスワードの再発行を行ってください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA005",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA001",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "分散型バージョン管理システムであるGitHubを使うことで、リポジトリを複数持つことができ、開発の形態や規模に合わせてソースコードの管理ができます。段はローカルリポジトリを使って作業し、ある程度作業できたらリモートリポジトリに反映するといった使い方ができます。リモートリポジトリにアクセスできない環境でも作業を進めることができます。また、大きな規模のソフトウェアの場合、個人や小さなチームで試験的に実装を進めて、ある程度進んだ時点で親のリポジトリや他の開発者のリポジトリに反映するといった使い方ができます。開発者同士の作業を柔軟に進めることができ、オープンソースのプロジェクトなどにも適しています。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.8198462060264102,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "分散型バージョン管理システムであるGitHubを使うことで、リポジトリを複数持つことができ、開発の形態や規模に合わせてソースコードの管理ができます。段はローカルリポジトリを使って作業し、ある程度作業できたらリモートリポジトリに反映するといった使い方ができます。リモートリポジトリにアクセスできない環境でも作業を進めることができます。また、大きな規模のソフトウェアの場合、個人や小さなチームで試験的に実装を進めて、ある程度進んだ時点で親のリポジトリや他の開発者のリポジトリに反映するといった使い方ができます。開発者同士の作業を柔軟に進めることができ、オープンソースのプロジェクトなどにも適しています。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA006",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.18015379397358977,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA001",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "ユーザー名またはメールアドレスとパスワードの組合せが間違っていないか再度確認してください。それでも解決しない場合は管理者に問い合わせてください。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.9212950891670701,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ユーザー名またはメールアドレスとパスワードの組合せが間違っていないか再度確認してください。それでも解決しない場合は管理者に問い合わせてください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA007",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.07870491083292988,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ネットワーク環境に問題がありませんか。ストリーミングを最高画質や高画質を選択している場合は低画質にしてみて再生ができるか試してみてください。それでも再生できなければサーバーのトラブルの可能性があります。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA021",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "他の作業者と同一ファイルの同一行に変更を加えたものが衝突しています。差分を確認し、採用するコミットを選択して解消してください。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.550808906183925,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "他の作業者と同一ファイルの同一行に変更を加えたものが衝突しています。差分を確認し、採用するコミットを選択して解消してください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA008",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "すでに存在しないリポジトリにアクセスしようとしている可能性があります。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.5000251250253474,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "すでに存在しないリポジトリにアクセスしようとしている可能性があります。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA009",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.49997487497465265,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ユーザー名またはメールアドレスとパスワードの組合せが間違っていないか再度確認してください。それでも解決しない場合は管理者に問い合わせてください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA007",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "GitHubは分散型バージョン管理システムでリポジトリを複数持つことができる一歩、SVNは単一のリポジトリしか持てないので集中型バージョン管理システムと呼ばれています。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.6858082283952102,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "GitHubは分散型バージョン管理システムでリポジトリを複数持つことができる一歩、SVNは単一のリポジトリしか持てないので集中型バージョン管理システムと呼ばれています。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA010",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.31419177160478984,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "一部機能の制限はありますが、無料で利用できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA011",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "一部機能の制限はありますが、無料で利用できます。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.7804834692216881,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "一部機能の制限はありますが、無料で利用できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA011",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.21951653077831196,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "GitHubは分散型バージョン管理システムでリポジトリを複数持つことができる一歩、SVNは単一のリポジトリしか持てないので集中型バージョン管理システムと呼ばれています。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA010",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "「設定」→「Email」よりメールアドレスを変更できます。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.8790998891618623,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「Email」よりメールアドレスを変更できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA012",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.12090011083813772,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ログイン画面の「パスワードを忘れた」よりパスワードの再発行を行ってください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA005",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "変更できません。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.7253713628111449,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "変更できません。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA013",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.27462863718885505,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「Email」よりメールアドレスを変更できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA012",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "「設定」→「アカウント」→「アカウント削除」より削除してください。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.6390569460831617,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「アカウント」→「アカウント削除」より削除してください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA014",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.3609430539168383,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "メールアドレス、パスワードを設定してアカウントを作成すれば誰でも無料で利用可能です。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA003",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "「設定」→「SSH / GPS」より登録してください。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.622126192832316,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「SSH / GPS」より登録してください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA015",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.37787380716768404,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「Email」よりメールアドレスを変更できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA012",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "「設定」→「SSH / GPS」より登録されているキー一覧を閲覧できます。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.6444113160082116,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「SSH / GPS」より登録されているキー一覧を閲覧できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA016",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.35558868399178856,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "「設定」→「Email」よりメールアドレスを変更できます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA012",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "Amazon Primeに会員登録することで利用可能なサブスク型のビデオ視聴サービスです。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 1,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "Amazon Primeに会員登録することで利用可能なサブスク型のビデオ視聴サービスです。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA017",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA001",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "国内外の映画、TVドラマ、アニメ、ドキュメンタリー等のコンテンツを扱っています。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 1,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "国内外の映画、TVドラマ、アニメ、ドキュメンタリー等のコンテンツを扱っています。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA018",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ソフトウェア開発のプラットフォームであり、ソースコードをホスティングする。コードのバージョン管理システムにはGitを使用します。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA001",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "amazon.co.jpのメニューから会員登録していただけます。会員登録後、すぐにご利用いただけます。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.7227269185003705,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "amazon.co.jpのメニューから会員登録していただけます。会員登録後、すぐにご利用いただけます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA019",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.27727308149962954,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "月額500円、年額4900円の有料サービスです。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA023",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "会員登録はお済みでしょうか。お済みで無い場合はまずは会員登録を行ってください。お済みであるにもかかわらずご利用できない場合、ログインができていない可能性があります。Emailアドレスをパスワードを確認の上、再度ログインを試みてください。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.6761217088604909,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "会員登録はお済みでしょうか。お済みで無い場合はまずは会員登録を行ってください。お済みであるにもかかわらずご利用できない場合、ログインができていない可能性があります。Emailアドレスをパスワードを確認の上、再度ログインを試みてください。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA020",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.3238782911395091,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "月額500円、年額4900円の有料サービスです。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA023",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "ネットワーク環境に問題がありませんか。ストリーミングを最高画質や高画質を選択している場合は低画質にしてみて再生ができるか試してみてください。それでも再生できなければサーバーのトラブルの可能性があります。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.9027446287937939,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "ネットワーク環境に問題がありませんか。ストリーミングを最高画質や高画質を選択している場合は低画質にしてみて再生ができるか試してみてください。それでも再生できなければサーバーのトラブルの可能性があります。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA021",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.09725537120620621,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "月額500円、年額4900円の有料サービスです。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA023",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "HuluやNetflix等他のサービスに比べコンテンツ数は少ないですが、定額で利用できるのが特徴です。また、Amazon Primeに加入するとショッピングでの配達日指定やAmazon Musicの利用といった付加価値があります。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.7177249352199686,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "HuluやNetflix等他のサービスに比べコンテンツ数は少ないですが、定額で利用できるのが特徴です。また、Amazon Primeに加入するとショッピングでの配達日指定やAmazon Musicの利用といった付加価値があります。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA022",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.28227506478003145,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "GitHubは分散型バージョン管理システムでリポジトリを複数持つことができる一歩、SVNは単一のリポジトリしか持てないので集中型バージョン管理システムと呼ばれています。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA010",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "月額500円、年額4900円の有料サービスです。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.5997715751886518,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "月額500円、年額4900円の有料サービスです。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA023",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.4002284248113483,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "amazon.co.jpのメニューから会員登録していただけます。会員登録後、すぐにご利用いただけます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA019",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  },
+  {
+    "responses": [
+      {
+        "type": "text",
+        "collectFeedback": true,
+        "text": "アカウント情報のページより解約していただけます。Amazon Primeを解約すると、ショッピングの配達日指定、Amazon Music、Amazon Kindle等のサービスもご利用いただけなくなります。",
+        "typing": true,
+        "markdown": true
+      }
+    ],
+    "suggestions": [
+      {
+        "confidence": 0.6625435964247371,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "アカウント情報のページより解約していただけます。Amazon Primeを解約すると、ショッピングの配達日指定、Amazon Music、Amazon Kindle等のサービスもご利用いただけなくなります。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA024",
+        "decision": {
+          "status": "elected",
+          "reason": "best remaining suggestion available"
+        }
+      },
+      {
+        "confidence": 0.33745640357526296,
+        "payloads": [
+          {
+            "type": "text",
+            "collectFeedback": true,
+            "text": "amazon.co.jpのメニューから会員登録していただけます。会員登録後、すぐにご利用いただけます。",
+            "typing": true,
+            "markdown": true
+          }
+        ],
+        "source": "qna",
+        "sourceDetails": "__qna__QA019",
+        "decision": {
+          "status": "dropped",
+          "reason": "confidence lower than 0.5"
+        }
+      }
+    ]
+  }
+]
