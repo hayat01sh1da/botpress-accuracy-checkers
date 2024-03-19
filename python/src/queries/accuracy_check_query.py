@@ -16,14 +16,14 @@ class AccuracyCheckQuery:
         self.test_data = __csv_to_dicts__(test_data)
 
     def res_bodies(self):
-        return [json.loads(res_body.read()) for res_body in self._request()]
+        return [json.loads(res_body.read()) for res_body in self.__request__()]
 
     # private
 
-    def _uri(self):
+    def __uri__(self):
         return '{}://{}/api/v1/bots/{}/converse/{}/secured?include=suggestions'.format(self.scheme, self.host, self.bot_id, self.user_id)
 
-    def _request(self):
+    def __request__(self):
         responses = list()
         for test_datum in self.test_data:
             header = {
@@ -34,7 +34,7 @@ class AccuracyCheckQuery:
                 'type': 'text',
                 'text': test_datum['Question']
             }
-            req = urllib.request.Request(self._uri(), json.dumps(body).encode(), header)
+            req = urllib.request.Request(self.__uri__(), json.dumps(body).encode(), header)
             res = urllib.request.urlopen(req)
             responses.append(res)
         return responses

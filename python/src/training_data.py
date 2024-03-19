@@ -9,10 +9,10 @@ class TrainingData:
         self.training_data = training_data
 
     def export(self, dirname):
-        with open(self._filename(dirname), 'w') as f:
+        with open(self.__filename__(dirname), 'w') as f:
             f.write(__to_json__(self.training_data))
 
     # private
 
-    def _filename(self, dirname):
+    def __filename__(self, dirname):
       return os.path.join(dirname, 'training_data_{0:%Y%m%d%H%M%S}.json'.format(datetime.datetime.now()))
