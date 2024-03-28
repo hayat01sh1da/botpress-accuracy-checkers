@@ -83,16 +83,19 @@ RSpec.describe ScoreChartController, type: :request do
 
   describe '#draw' do
     let(:source)      { Rails.root.join('csv', 'accuracy_score_chart_20211130220255.csv') }
-    let(:destination) { Rails.root.join('tmp', 'downloads', 'accuracy_score_chart_20211130220255.csv') }
+    let(:dirname)     { Rails.root.join('tmp', 'downloads') }
+    let(:destination) { Rails.root.join(dirname, 'accuracy_score_chart_20211130220255.csv') }
 
     before do
       get score_chart_draw_path
     end
 
     around(:example) do |example|
+      FileUtils.mkdir_p(dirname) unless Dir.exist?(dirname)
       FileUtils.copy(source, destination)
       example.run
-      FileUtils.rm(destination)
+      FileUtils.rm_rf(destination)
+      FileUtils.rm_rf(dirname) if Dir[destination].empty?
     end
 
     it 'returns a successful status code' do
@@ -119,7 +122,8 @@ RSpec.describe ScoreChartController, type: :request do
 
   describe '#download' do
     let(:source)           { Rails.root.join('csv', 'accuracy_score_chart_20211130220255.csv') }
-    let(:destination)      { Rails.root.join('tmp', 'downloads', 'accuracy_score_chart_20211130220255.csv') }
+    let(:dirname)          { Rails.root.join('tmp', 'downloads') }
+    let(:destination)      { Rails.root.join(dirname, 'accuracy_score_chart_20211130220255.csv') }
     let(:postfix)          { DateTime.current.strftime('%F%T').gsub(/[:\-]/, '') }
     let(:file_to_download) { "accuracy_score_chart_#{postfix}.csv" }
 
@@ -128,9 +132,11 @@ RSpec.describe ScoreChartController, type: :request do
     end
 
     around(:example) do |example|
+      FileUtils.mkdir_p(dirname) unless Dir.exist?(dirname)
       FileUtils.copy(source, destination)
       example.run
-      FileUtils.rm(destination)
+      FileUtils.rm_rf(destination)
+      FileUtils.rm_rf(dirname) if Dir[destination].empty?
     end
 
     it 'returns a successful status code' do
