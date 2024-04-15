@@ -1,7 +1,6 @@
 ## 1. Common Environment
 
 - WSL(Ubuntu 20.04.6 LTS)
-- Docker 25.0.3
 
 ## 2. Manual Documents
 
