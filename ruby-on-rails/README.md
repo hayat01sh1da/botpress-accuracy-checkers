@@ -1,7 +1,7 @@
 ## 1. Environment
 
 - Rails 7.1.3.3
-- Ruby 3.3.3
+- Ruby 3.3.4
 - Docker 27.0.3
 
 ## 2. Boot Docker Process
