@@ -12,7 +12,7 @@ class AccuracyCheck
 
   def export_chart(dirname)
     res_bodies = accuracy_check_query.res_bodies
-    csv_chart   = chart_drawer(res_bodies).csv
+    csv_chart  = chart_drawer(res_bodies).csv
     File.open(filename(dirname), 'w') { _1.puts(csv_chart) }
   end
 
