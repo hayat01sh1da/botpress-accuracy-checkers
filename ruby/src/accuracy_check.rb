@@ -21,7 +21,7 @@ class AccuracyCheck
   attr_reader :scheme, :host, :bot_id, :user_id, :test_data
 
   def accuracy_check_query
-    @accuracy_check_query ||= ::Lib::AccuracyCheckQuery.new(scheme, host, bot_id, user_id, test_data)
+    @accuracy_check_query ||= ::Queries::AccuracyCheckQuery.new(scheme, host, bot_id, user_id, test_data)
   end
 
   def chart_drawer(res_bodies)
