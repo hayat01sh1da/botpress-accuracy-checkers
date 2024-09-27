@@ -1,4 +1,4 @@
-require_relative './src/accuracy_check'
+require_relative '../src/accuracy_check'
 
 scheme    = 'https'
 host      = 'oasist-botpress-server.herokuapp.com'
