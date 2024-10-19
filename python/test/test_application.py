@@ -11,10 +11,10 @@ class TestApplication(unittest.TestCase):
             os.makedirs(self.dirname)
 
     def tearDown(self):
-        if os.path.isdir(self.dirname):
+        if os.path.exists(self.dirname):
             shutil.rmtree(self.dirname)
         for pycache in self.pycaches:
-            if os.path.isdir(pycache):
+            if os.path.exists(pycache):
                 shutil.rmtree(pycache)
 
 if __name__ == '__main__':
