@@ -12,13 +12,13 @@
 #     @accuracy_check = AccuracyCheck.new(scheme, host, bot_id, user_id, test_data)
 #   end
 
+#   def teardown
+#     super
+#   end
+
 #   def test_export_chart
 #     accuracy_check.export_chart(dirname)
 #     assert Dir[File.join(dirname, 'accuracy_score_chart*.json')].any?
-#   end
-
-#   def teardown
-#     super
 #   end
 
 #   private

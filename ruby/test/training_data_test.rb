@@ -9,13 +9,13 @@ class TrainingDataTest < ApplicationTest
     @training_data = TrainingData.new(training_data)
   end
 
+  def teardown
+    super
+  end
+
   def test_export
     training_data.export(dirname)
     assert(Dir[File.join(dirname, 'training_data*.json')].any?)
-  end
-
-  def teardown
-    super
   end
 
   private
