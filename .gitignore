@@ -11,8 +11,4 @@ ruby/test/tmp
 
 # Python
 
-python/src/__pycache__/
-python/src/lib/__pycache__/
-python/src/queries/__pycache__/
-python/test/__pycache__/
-python/test/tmp/
+python/**/__pycache__/
