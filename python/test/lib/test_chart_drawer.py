@@ -2,7 +2,6 @@ import unittest
 import os
 import datetime
 import json
-import csv
 import sys
 sys.path.append('./src/lib')
 sys.path.append('./test')
