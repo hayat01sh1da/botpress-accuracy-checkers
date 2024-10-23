@@ -5,7 +5,7 @@
 ## 2. Bulk Execution of Unit Tests
 
 ```command
-$ cd ./ruby/
+$ cd ./ruby
 $ rake
 Run options: --seed 32524
 
