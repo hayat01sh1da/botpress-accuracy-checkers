@@ -265,7 +265,7 @@ DEPENDENCIES
   pry-rails (~> 0.3.11)
   puma (~> 6.4.2)
   rack-mini-profiler (~> 3.3.1)
-  rails (~> 7.2.1)
+  rails (~> 7.2.1.2)
   rexml (~> 3.3.8)
   rspec-rails (~> 7.0.1)
   spring (~> 4.2.1)
