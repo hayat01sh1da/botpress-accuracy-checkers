@@ -24,7 +24,7 @@ jobs:
           ruby-version: '3.3.5'
           bundler-cache: true
       - name: Run RSpec
+        working-directory: ./ruby-on-rails
         run: |
-          cd ./ruby-on-rails/
           bundle install
           bundle exec rspec
