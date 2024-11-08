@@ -56,4 +56,7 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  # Always preserves the full timezone rather than offset of the receiver in Rails 8.1
+  config.active_support.to_time_preserves_timezone = :zone
 end
