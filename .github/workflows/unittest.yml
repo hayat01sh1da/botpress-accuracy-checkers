@@ -8,14 +8,16 @@ on:
     branches:
       - master
     paths:
-      - ./python
-      - '!./python/README.md'
+      - '.github/workflows/unittest.yml'
+      - 'python/run_unittests.sh'
+      - '**.py'
   pull_request:
     branches:
       - master
     paths:
-      - ./python
-      - '!./python/README.md'
+      - '.github/workflows/unittest.yml'
+      - 'python/run_unittests.sh'
+      - '**.py'
 
 permissions:
   contents: read
