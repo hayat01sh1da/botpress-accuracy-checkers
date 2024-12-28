@@ -1,6 +1,6 @@
 ## 1. Environment
 
-- Ruby 3.3.6
+- Ruby 3.4.1
 
 ## 2. Bulk Execution of Unit Tests
 
