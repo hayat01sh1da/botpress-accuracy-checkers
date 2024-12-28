@@ -1,6 +1,6 @@
 ## 1. Environment
 
-- Rails 7.2.1
+- Rails 8.0.1
 - Ruby 3.3.6
 - Docker 27.4.0
 
