@@ -13,6 +13,7 @@ WORKDIR /app
 # Bundle Install
 RUN bundle config set path vendor/bundle
 COPY .ruby-version Gemfile Gemfile.lock ./
+RUN bundle config set force_ruby_platform true
 RUN bundle install
 
 # Remove the Remaining Process Files
