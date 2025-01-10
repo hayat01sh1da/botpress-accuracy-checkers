@@ -1,22 +1,19 @@
 FROM ruby:3.4.1
 
-# Install Packages
+# Packages
 RUN apt-get update && apt-get install -y curl build-essential libpq-dev libvips libvips-dev vim tree
 
 WORKDIR /tmp
 
-# Setup Bundler
+# Bundler
 RUN gem install bundler && gem update --system
 
 WORKDIR /app
 
-# Bundle Install
+# RubyGems
 RUN bundle config set path vendor/bundle
 COPY .ruby-version Gemfile Gemfile.lock ./
 RUN bundle config set force_ruby_platform true
-RUN bundle install
 
-# Remove the Remaining Process Files
-RUN rm -rf tmp/pids/server.pid
-
-CMD ["./bin/rails", "s", "-b", "0.0.0.0", "-p", "3000"]
+EXPOSE 3000
+CMD ["bash"]
