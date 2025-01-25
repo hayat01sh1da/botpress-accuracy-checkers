@@ -39,7 +39,7 @@ RSpec.describe ScoreChartController, type: :request do
           host: 'sample.com',
           bot: 'sample_bot',
           user: 'sample_user',
-          access_token: '1'.upto('10').to_a.then { _1 + 'A'.upto('Z').to_a }.then { _1 + 'a'.upto('z').to_a }.sample(64).join(''),
+          access_token: '1'.upto('10').to_a.then { it + 'A'.upto('Z').to_a }.then { it + 'a'.upto('z').to_a }.sample(64).join(''),
           test_data: nil
         }
       }
