@@ -1,5 +1,4 @@
 import urllib.request
-import csv
 import json
 import os
 import re
@@ -14,14 +13,12 @@ class AccuracyCheckQuery:
         self.bot_id    = re.sub(INVALID_PATTERNS, '', bot_id)
         self.user_id   = re.sub(INVALID_PATTERNS, '', user_id)
         self.test_data = __csv_to_dicts__(test_data)
+        self.uri       = '{}://{}/api/v1/bots/{}/converse/{}/secured?include=suggestions'.format(self.scheme, self.host, self.bot_id, self.user_id)
 
     def res_bodies(self):
         return [json.loads(res_body.read()) for res_body in self.__request__()]
 
     # private
-
-    def __uri__(self):
-        return '{}://{}/api/v1/bots/{}/converse/{}/secured?include=suggestions'.format(self.scheme, self.host, self.bot_id, self.user_id)
 
     def __request__(self):
         responses = list()
@@ -34,7 +31,7 @@ class AccuracyCheckQuery:
                 'type': 'text',
                 'text': test_datum['Question']
             }
-            req = urllib.request.Request(self.__uri__(), json.dumps(body).encode(), header)
+            req = urllib.request.Request(self.uri, json.dumps(body).encode(), header)
             res = urllib.request.urlopen(req)
             responses.append(res)
         return responses

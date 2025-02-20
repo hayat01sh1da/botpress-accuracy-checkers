@@ -6,28 +6,20 @@ class ChartDrawer:
     def __init__(self, test_data, res_bodies):
         self.test_data  = __csv_to_dicts__(test_data)
         self.res_bodies = res_bodies
+        self.ids        = [test_datum['ID'] for test_datum in self.test_data]
+        self.questions  = [test_datum['Question'] for test_datum in self.test_data]
+        self.answers    = [test_datum['Answer'] for test_datum in self.test_data]
+        self.header     = ['ID', 'Test_Data'] + self.ids
 
     def csv(self, f):
         writer = csv.writer(f)
-        writer.writerow(self.__header__())
+        writer.writerow(self.header)
         i = 0
         for row in self.__rows__():
-            writer.writerow([self.__ids__()[i], self.__questions__()[i]] + row)
+            writer.writerow([self.ids[i], self.questions[i]] + row)
             i += 1
 
     # private
-
-    def __ids__(self):
-        return [test_datum['ID'] for test_datum in self.test_data]
-
-    def __questions__(self):
-        return [test_datum['Question'] for test_datum in self.test_data]
-
-    def __answers__(self):
-        return [test_datum['Answer'] for test_datum in self.test_data]
-
-    def __header__(self):
-        return ['ID', 'Test_Data'] + self.__ids__()
 
     def __score_tables__(self):
         score_tables = list()
@@ -49,7 +41,7 @@ class ChartDrawer:
             _scores = ['0.0%' * 1 for i in range(len(self.test_data))]
             for s_table in s_tables:
                 for answer, score in s_table.items():
-                    index          = self.__answers__().index(answer)
+                    index          = self.answers.index(answer)
                     _scores[index] = '{:.1f}%'.format(score * 100)
             scores.append(_scores)
             rows.extend(scores)

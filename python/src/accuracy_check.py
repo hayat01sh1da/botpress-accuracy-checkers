@@ -13,30 +13,15 @@ class AccuracyCheck:
         self.bot_id               = bot_id
         self.user_id              = user_id
         self.test_data            = test_data
-        self.accuracy_check_query = None
-        self.res_bodies           = None
-        self.chart_drawer         = None
+        self.accuracy_check_query = AccuracyCheckQuery(self.scheme, self.host, self.bot_id, self.user_id, self.test_data)
+        self.res_bodies           = self.accuracy_check_query.res_bodies()
+        self.chart_drawer         = ChartDrawer(self.test_data, self.res_bodies)
 
     def export_chart(self, dirname):
-        self.res_bodies = self.__accuracy_check_query__().res_bodies()
         with open(self.__filename__(dirname), 'w') as f:
-            self.__chart_drawer__().csv(f)
+            self.chart_drawer.csv(f)
 
     # private
-
-    def __accuracy_check_query__(self):
-        if self.accuracy_check_query:
-            return self.accuracy_check_query
-        else:
-            self.accuracy_check_query = AccuracyCheckQuery(self.scheme, self.host, self.bot_id, self.user_id, self.test_data)
-            return self.accuracy_check_query
-
-    def __chart_drawer__(self):
-        if self.chart_drawer:
-            return self.chart_drawer
-        else:
-            self.chart_drawer = ChartDrawer(self.test_data, self.res_bodies)
-            return self.chart_drawer
 
     def __filename__(self, dirname):
       return os.path.join(dirname, 'accuracy_score_chart_{0:%Y%m%d%H%M%S}.csv'.format(datetime.datetime.now()))
