@@ -4,20 +4,20 @@ from list_handler import __uniq_list__
 
 def __template__():
     return {
-      'id': '',
-      'data': {
-        'action': 'text',
-        'contexts': ['sample'],
-        'enabled': True,
-        'answers': {
-          'ja': ['']
-        },
+        'id': '',
+        'data': {
+            'action': 'text',
+            'contexts': ['sample'],
+            'enabled': True,
+            'answers': {
+                'ja': ['']
+            },
         'questions': {
-          'ja': []
+            'ja': []
         },
         'redirectFlow': '',
         'redirectNode': ''
-      }
+        }
     }
 
 def __to_json__(csv_training_data):

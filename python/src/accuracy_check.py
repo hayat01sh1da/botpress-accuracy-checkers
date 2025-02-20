@@ -24,4 +24,4 @@ class AccuracyCheck:
     # private
 
     def __filename__(self, dirname):
-      return os.path.join(dirname, 'accuracy_score_chart_{0:%Y%m%d%H%M%S}.csv'.format(datetime.datetime.now()))
+        return os.path.join(dirname, 'accuracy_score_chart_{0:%Y%m%d%H%M%S}.csv'.format(datetime.datetime.now()))

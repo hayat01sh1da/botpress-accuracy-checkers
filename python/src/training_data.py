@@ -15,4 +15,4 @@ class TrainingData:
     # private
 
     def __filename__(self, dirname):
-      return os.path.join(dirname, 'training_data_{0:%Y%m%d%H%M%S}.json'.format(datetime.datetime.now()))
+        return os.path.join(dirname, 'training_data_{0:%Y%m%d%H%M%S}.json'.format(datetime.datetime.now()))
