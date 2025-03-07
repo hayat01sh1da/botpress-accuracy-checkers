@@ -9,8 +9,6 @@ name: RSpec
 
 on:
   push:
-    branches:
-      - master
     paths:
       - '.github/workflows/rspec.yml'
       - 'ruby-on-rails/.ruby-version'
@@ -25,8 +23,6 @@ on:
       - 'ruby-on-rails/**/*.csv'
       - 'ruby-on-rails/**/*.json'
   pull_request:
-    branches:
-      - master
     paths:
       - '.github/workflows/rspec.yml'
       - '.ruby-version'
