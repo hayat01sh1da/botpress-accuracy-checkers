@@ -2,7 +2,7 @@
 
 - Rails 8.0.1
 - Ruby 3.4.2
-- Docker 27.5.1
+- Docker 28.0.1
 
 ## 2. Setup Docker
 
