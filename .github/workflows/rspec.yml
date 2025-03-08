@@ -25,15 +25,17 @@ on:
   pull_request:
     paths:
       - '.github/workflows/rspec.yml'
-      - '.ruby-version'
-      - 'Gemfile'
-      - 'Gemfile.lock'
-      - '**.rb'
-      - '**.rake'
-      - '**.html.erb'
-      - '**.js'
-      - '**.css'
-      - '**.csv'
+      - 'ruby-on-rails/.ruby-version'
+      - 'ruby-on-rails/Gemfile'
+      - 'ruby-on-rails/Gemfile.lock'
+      - 'ruby-on-rails/Rakefile'
+      - 'ruby-on-rails/**/*.rb'
+      - 'ruby-on-rails/**/*.rake'
+      - 'ruby-on-rails/**/*.js'
+      - 'ruby-on-rails/**/*.css'
+      - 'ruby-on-rails/**/*.html.erb'
+      - 'ruby-on-rails/**/*.csv'
+      - 'ruby-on-rails/**/*.json'
 
 permissions:
   contents: read
