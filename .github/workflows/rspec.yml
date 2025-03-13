@@ -55,8 +55,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
+      - name: Install Gem Dependencies
+        working-directory: ./ruby-on-rails
+        run: bundle install
       - name: Run RSpec
         working-directory: ./ruby-on-rails
-        run: |
-          bundle install
-          bundle exec rspec
+        run: bundle exec rspec
