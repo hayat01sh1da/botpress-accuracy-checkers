@@ -8,7 +8,7 @@ class TrainingData
   end
 
   def export(dirname)
-    IO.write(filename(dirname), to_json(training_data))
+    File.write(filename(dirname), to_json(training_data))
   end
 
   private
