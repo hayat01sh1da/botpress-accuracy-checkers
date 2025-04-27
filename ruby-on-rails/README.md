@@ -1,7 +1,7 @@
 ## 1. Environment
 
 - Rails 8.0.2
-- Ruby 3.4.2
+- Ruby 3.4.3
 - Docker 28.0.4
 
 ## 2. Setup Docker
