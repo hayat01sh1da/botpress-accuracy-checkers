@@ -10,9 +10,9 @@ gem 'puma', '~> 6.5.0'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails', '~> 3.5.2'
 
-gem 'dotenv-rails', '~> 3.1.7'
+gem 'dotenv-rails', '~> 3.1.8'
 
-gem 'nokogiri', '~> 1.18.6'
+gem 'nokogiri', '~> 1.18.8'
 
 gem 'rexml', '~> 3.4.1'
 
@@ -20,13 +20,13 @@ gem 'rexml', '~> 3.4.1'
 gem 'bootsnap', '~> 1.18.4', require: false
 
 # CSV
-gem 'csv', '~> 3.3.2'
+gem 'csv', '~> 3.3.4'
 
 # Data structure, similar to a Hash, that allows the definition of arbitrary attributes with their accompanying values
 gem 'ostruct', '~> 0.6.1'
 
 # A foreign function interface (FFI) is a mechanism by which a program written in one programming language can call routines or make use of services written or compiled in another one
-gem 'ffi', '~> 1.17.1'
+gem 'ffi', '~> 1.17.2'
 
 group :development, :test do
   # Debug tool used with binding.irb
