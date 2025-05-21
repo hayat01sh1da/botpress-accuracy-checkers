@@ -1,4 +1,4 @@
-FROM ruby:3.4.3
+FROM ruby:3.4.4
 
 # Packages
 RUN apt-get update && apt-get install -y curl build-essential libpq-dev libvips libvips-dev vim tree
