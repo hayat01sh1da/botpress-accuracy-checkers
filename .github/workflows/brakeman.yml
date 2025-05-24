@@ -35,5 +35,5 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
       - name: Run Brakeman
-        working-directory: ./ruby
+        working-directory: ./ruby-on-rails
         run: bundle exec brakeman --no-pager
