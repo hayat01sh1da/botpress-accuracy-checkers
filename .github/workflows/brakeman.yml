@@ -17,7 +17,7 @@ on:
       - 'ruby/**/*.rb'
   pull_request:
     paths:
-      - '.github/workflows/minitest.yml'
+      - '.github/workflows/brakeman.yml'
       - '.ruby-version'
       - 'ruby/**/*.rb'
 
