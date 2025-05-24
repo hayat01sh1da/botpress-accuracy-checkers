@@ -12,7 +12,7 @@ on:
     branches:
       - master
     paths:
-      - '.github/workflows/minitest.yml'
+      - '.github/workflows/brakeman.yml'
       - '.ruby-version'
       - 'ruby/**/*.rb'
   pull_request:
