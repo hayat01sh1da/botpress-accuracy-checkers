@@ -20,7 +20,7 @@ class TestChartDrawer(TestApplication):
         self.chart_drawer = ChartDrawer(self.csv_path, self.res_bodies)
 
     def test_csv(self):
-        filename = os.path.join(self.dirname, 'accuracy_score_chart_{0:%Y%m%d%H%M%S}.csv'.format(datetime.datetime.now()))
+        filename = os.path.join(self.dirname, f'accuracy_score_chart_{datetime.datetime.now():%Y%m%d%H%M%S}.csv')
         with open(filename, 'w') as f:
             self.chart_drawer.csv(f)
         test_data = __csv_to_dicts__(self.csv_path)

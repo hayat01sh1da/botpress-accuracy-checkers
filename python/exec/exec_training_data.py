@@ -11,7 +11,7 @@ dirname           = os.path.join('..', 'json')
 
 training_data = TrainingData(csv_training_data)
 training_data.export(dirname)
-print("--- Successfully exported JSON training data under {dirname}/ ---".format(dirname = dirname))
+print(f'--- Successfully exported JSON training data under {dirname}/ ---')
 
 pycaches = glob.glob(os.path.join('.', '**', '__pycache__'), recursive = True)
 for pycache in pycaches:

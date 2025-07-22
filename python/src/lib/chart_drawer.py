@@ -42,7 +42,7 @@ class ChartDrawer:
             for s_table in s_tables:
                 for answer, score in s_table.items():
                     index          = self.answers.index(answer)
-                    _scores[index] = '{:.1f}%'.format(score * 100)
+                    _scores[index] = f'{score * 100:.1f}%'
             scores.append(_scores)
             rows.extend(scores)
         return rows

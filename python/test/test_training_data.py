@@ -14,7 +14,7 @@ class TestTrainingData(TestApplication):
 
     def test_export(self):
         self.training_data.export(self.dirname)
-        self.assertTrue(any(glob.glob('{dirname}/training_data*.json'.format(dirname = self.dirname))))
+        self.assertTrue(any(glob.glob(f'{self.dirname}/training_data*.json')))
 
 if __name__ == '__main__':
     unittest.main()

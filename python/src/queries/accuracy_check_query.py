@@ -13,7 +13,7 @@ class AccuracyCheckQuery:
         self.bot_id    = re.sub(INVALID_PATTERNS, '', bot_id)
         self.user_id   = re.sub(INVALID_PATTERNS, '', user_id)
         self.test_data = __csv_to_dicts__(test_data)
-        self.uri       = '{}://{}/api/v1/bots/{}/converse/{}/secured?include=suggestions'.format(self.scheme, self.host, self.bot_id, self.user_id)
+        self.uri       = f'{self.scheme}://{self.host}/api/v1/bots/{self.bot_id}/converse/{self.user_id}/secured?include=suggestions'
 
     def res_bodies(self):
         return [json.loads(res_body.read()) for res_body in self.__request__()]
