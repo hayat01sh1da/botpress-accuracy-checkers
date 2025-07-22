@@ -12,7 +12,7 @@ gem 'sprockets-rails', '~> 3.5.2'
 
 gem 'dotenv-rails', '~> 3.1.8'
 
-gem 'nokogiri', '~> 1.18.8'
+gem 'nokogiri', '~> 1.18.9'
 
 gem 'rexml', '~> 3.4.1'
 
@@ -23,7 +23,7 @@ gem 'bootsnap', '~> 1.18.4', require: false
 gem 'csv', '~> 3.3.5'
 
 # Data structure, similar to a Hash, that allows the definition of arbitrary attributes with their accompanying values
-gem 'ostruct', '~> 0.6.1'
+gem 'ostruct', '~> 0.6.3'
 
 # A foreign function interface (FFI) is a mechanism by which a program written in one programming language can call routines or make use of services written or compiled in another one
 gem 'ffi', '~> 1.17.2'
