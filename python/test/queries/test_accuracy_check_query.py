@@ -21,7 +21,7 @@
 #     def test_csv(self):
 #         res_bodies = self.accuracy_check_query.res_bodies()
 #         test_data  = __csv_to_dicts__(self.csv_path)
-#         self.assertEqual(len(test_data), len(res_bodies))
+#         self.assertEqual(len(res_bodies), len(test_data))
 
 # if __name__ == '__main__':
 #     unittest.main()

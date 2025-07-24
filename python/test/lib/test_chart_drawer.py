@@ -25,7 +25,7 @@ class TestChartDrawer(TestApplication):
             self.chart_drawer.csv(f)
         test_data = __csv_to_dicts__(self.csv_path)
         csv_chart = __csv_to_dicts__(filename)
-        self.assertEqual(len(test_data), len(csv_chart))
+        self.assertEqual(len(csv_chart), len(test_data))
 
 if __name__ == '__main__':
     unittest.main()
