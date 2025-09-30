@@ -12,9 +12,9 @@ gem 'sprockets-rails', '~> 3.5.2'
 
 gem 'dotenv-rails', '~> 3.1.8'
 
-gem 'nokogiri', '~> 1.18.9'
+gem 'nokogiri', '~> 1.18.10'
 
-gem 'rexml', '~> 3.4.1'
+gem 'rexml', '~> 3.4.4'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '~> 1.18.4', require: false
