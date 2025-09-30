@@ -1,6 +1,6 @@
 ## 1. Environment
 
-- Rails 8.0.2
+- Rails 8.0.3
 - Ruby 3.4.6
 - Docker 28.3.2
 
