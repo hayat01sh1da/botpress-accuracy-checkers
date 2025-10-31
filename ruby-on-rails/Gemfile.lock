@@ -267,7 +267,7 @@ DEPENDENCIES
   ostruct (~> 0.6.3)
   puma (~> 6.5.0)
   rack-mini-profiler (~> 3.3.1)
-  rails (~> 8.1.0)
+  rails (~> 8.1.1)
   rexml (~> 3.4.4)
   rspec-rails (~> 7.1.1)
   spring (~> 4.2.1)
