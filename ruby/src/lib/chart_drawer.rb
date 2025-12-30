@@ -25,7 +25,7 @@ module Lib
 
     def score_tables
       res_bodies.map { |res_body|
-        (0...res_body['suggestions'].size).map { |index|
+        (0...res_body['suggestions'].length).map { |index|
           score_table         = Hash.new
           answer              = res_body['suggestions'][index]['payloads'][0]['text']
           score               = res_body['suggestions'][index]['confidence']
@@ -38,7 +38,7 @@ module Lib
     def rows
       score_tables.map { |score_table|
         scores = Array.new
-        scores.fill('0.0%', 0...test_data['Answer'].size)
+        scores.fill('0.0%', 0...test_data['Answer'].length)
         score_table.map { |score_mapping|
           score_mapping.each { |answer, score|
             index         = test_data['Answer'].find_index(answer)

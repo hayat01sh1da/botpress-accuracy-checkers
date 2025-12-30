@@ -9,6 +9,6 @@ RSpec.describe ChartDrawer do
   let(:res_bodies)   { File.read(json_path).then { |json| JSON.parse(json) } }
 
   it 'returns the same number of rows in the CSV chart as that in the test data' do
-    expect(test_data.size).to eq(csv_chart.split(/\n/).size)
+    expect(test_data.length).to eq(csv_chart.split(/\n/).length)
   end
 end

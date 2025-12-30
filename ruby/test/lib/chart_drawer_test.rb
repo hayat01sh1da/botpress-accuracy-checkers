@@ -14,7 +14,7 @@ class ChartDrawerTest < Minitest::Test
   def test_csv
     csv_chart = chart_drawer.csv
     test_data = CSV.read(csv_path)
-    assert_equal test_data.size, csv_chart.split(/\n/).size
+    assert_equal test_data.length, csv_chart.split(/\n/).length
   end
 
   private
