@@ -16,7 +16,7 @@
 #   def test_res_bodies
 #     res_bodies = accuracy_check_query.res_bodies
 #     test_data  = CSV.read(csv_path, headers: true)
-#     assert_equal test_data.size, res_bodies.size
+#     assert_equal test_data.length, res_bodies.length
 #   end
 
 #   private
