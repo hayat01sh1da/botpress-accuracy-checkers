@@ -7,8 +7,7 @@ class TestApplication(unittest.TestCase):
     def setUp(self):
         self.dirname  = os.path.join('test', 'tmp')
         self.pycaches = glob.glob(os.path.join('.', '**', '__pycache__'), recursive = True)
-        if not os.path.exists(self.dirname):
-            os.makedirs(self.dirname)
+        os.makedirs(self.dirname, exist_ok = True)
 
     def tearDown(self):
         if os.path.exists(self.dirname):
