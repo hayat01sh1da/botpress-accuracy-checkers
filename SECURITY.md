@@ -3,8 +3,7 @@
 ## Supported Versions
 
 - The `master` branch is the only branch that receives security fixes.
-- Docs and samples under `ruby-on-rails/`, `ruby/`, and `python/` are intended
-  to be consumed from the latest commit. Older tags are not maintained.
+- Docs and samples under `ruby-on-rails/`, `ruby/`, and `python/` are intended to be consumed from the latest commit. Older tags are not maintained.
 
 ## Ecosystem & Compatibility
 
@@ -17,11 +16,8 @@
 
 ## Backward Compatibility
 
-- Tutorials strive to keep helper scripts backward compatible across the same
-	major runtime line (Ruby 4.0.x, Python 3.14.x). Breaking changes are
-	announced in the docs prior to release.
-- Older majors (Ruby 3.x, Python 3.13 and below) and historical tags are not
-	patched; please upgrade to the versions listed above before reporting.
+- Tutorials strive to keep helper scripts backward compatible across the same major runtime line (Ruby 4.0.x, Python 3.14.x). Breaking changes are announced in the docs prior to release.
+- Older majors (Ruby 3.x, Python 3.13 and below) and historical tags are not patched; please upgrade to the versions listed above before reporting.
 
 ## Reporting a Vulnerability
 
@@ -32,7 +28,6 @@ Please report vulnerabilities privately so we can triage before disclosure:
 2. **Alternate:** Email the maintainers at `security@project.org` with a short
 	summary, reproduction steps, affected components, and suggested mitigations.
 
-We aim to acknowledge new reports within **3 business days** and provide status
-updates at least every **7 business days** while we investigate. Once a fix is
-ready we will coordinate release timing and, if desired, credit you in the
-advisory. If a report is deemed out of scope, we will explain why.
+We aim to acknowledge new reports within **3 business days** and provide status updates at least every **7 business days** while we investigate.  
+Once a fix is ready we will coordinate release timing and, if desired, credit you in the advisory.  
+If a report is deemed out of scope, we will explain why.
