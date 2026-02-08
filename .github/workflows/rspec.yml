@@ -61,7 +61,7 @@ jobs:
           bundler-cache: true
       - name: Install Gem Dependencies
         working-directory: ./ruby-on-rails
-        run: bundle install
+        run: bundle install --path vendor/bundle
       - name: Run RSpec
         working-directory: ./ruby-on-rails
         run: bundle exec rspec
