@@ -12,7 +12,7 @@ gem 'sprockets-rails', '~> 3.5.2'
 
 gem 'dotenv-rails', '~> 3.1.8'
 
-gem 'nokogiri', '~> 1.18.10'
+gem 'nokogiri', '~> 1.19.1'
 
 gem 'rexml', '~> 3.4.4'
 
