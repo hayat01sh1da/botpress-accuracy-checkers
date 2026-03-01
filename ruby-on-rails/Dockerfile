@@ -6,8 +6,8 @@ RUN apt-get update && apt-get install -y curl build-essential libpq-dev libvips 
 WORKDIR /tmp
 
 # Bundler
-RUN gem update --system 4.0.6
-RUN gem install bundler -v 4.0.6
+RUN gem update --system 4.0.7
+RUN gem install bundler -v 4.0.7
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ WORKDIR /app
 COPY .ruby-version Gemfile Gemfile.lock ./
 ENV BUNDLE_GEMFILE=/app/Gemfile
 ENV BUNDLE_PATH=/app/vendor/bundle
-ENV BUNDLE_FROZEN=true
+# ENV BUNDLE_FROZEN=true
 RUN bundle install
 
 EXPOSE 3000
