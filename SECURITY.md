@@ -1,5 +1,3 @@
-# Security Policy
-
 ## Supported Versions
 
 - The `master` branch is the only branch that receives security fixes.
@@ -21,13 +19,7 @@
 
 ## Reporting a Vulnerability
 
-Please report vulnerabilities privately so we can triage before disclosure:
+Please report issues privately via **GitHub Security Advisory** (preferred) — open through the repository’s **Security → Report a vulnerability** workflow.
 
-1. **Preferred:** Open a private GitHub Security Advisory via the repository’s
-	**Security → Report a vulnerability** workflow.
-2. **Alternate:** Email the maintainers at `security@project.org` with a short
-	summary, reproduction steps, affected components, and suggested mitigations.
-
-We aim to acknowledge new reports within **3 business days** and provide status updates at least every **7 business days** while we investigate.  
-Once a fix is ready we will coordinate release timing and, if desired, credit you in the advisory.  
-If a report is deemed out of scope, we will explain why.
+Acknowledgement occurs and status updates follow as soon as possible.  
+After remediation we publish guidance alongside required dependency updates.
