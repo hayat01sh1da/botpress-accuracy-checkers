@@ -2,6 +2,7 @@
 [![Actions Status: RSpec](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/RSpec/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22RSpec%22)
 [![Actions Status: Minitest](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/Minitest/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22Minitest%22)
 [![Actions Status: Brakeman](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/Brakeman/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22Brakeman%22)
+[![Actions Status: CodeQL](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/CodeQL/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22CodeQL%22)
 
 ## 1. Common Environment
 
