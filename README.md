@@ -1,3 +1,8 @@
+[![Actions Status: UnitTest](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/UnitTest/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22UnitTest%22)
+[![Actions Status: RSpec](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/RSpec/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22RSpec%22)
+[![Actions Status: Minitest](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/Minitest/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22Minitest%22)
+[![Actions Status: Brakeman](https://github.com/hayat01sh1da/botpress-accuracy-checkers/workflows/Brakeman/badge.svg)](https://github.com/hayat01sh1da/botpress-accuracy-checkers/actions?query=workflow%3A%22Brakeman%22)
+
 ## 1. Common Environment
 
 - WSL(Ubuntu 24.04.3 LTS)
