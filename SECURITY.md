@@ -7,7 +7,7 @@
 
 | Stack / Component        | Version(s) / Tooling           | Notes |
 | ------------------------ | ------------------------------ | ----- |
-| OS baseline              | WSL (Ubuntu 24.04.3 LTS)       | Matches the environment described in the docs section. |
+| OS baseline              | WSL (Ubuntu 25.10)       | Matches the environment described in the docs section. |
 | Ruby on Rails exercises  | Ruby 4.0.2 (`.ruby-version`)   | Bundler-managed gems per sample app; keep Rails/Botpress gems current. |
 | Ruby CLI helpers         | Ruby 4.0.2                     | Depend only on the Ruby standard library. |
 | Python automation        | CPython 3.14.3 (`.python-version`) | Scripts currently rely on the Python standard library; add new packages via per-folder requirements if needed. |
