@@ -3,7 +3,7 @@ FROM ruby:4.0.2
 # Packages
 RUN apt-get update && apt-get install -y curl build-essential libpq-dev libvips libvips-dev vim tree
 
-ARG BUNDLER_VERSION=4.0.9
+ARG BUNDLER_VERSION=4.0.10
 
 WORKDIR /tmp
 
@@ -17,7 +17,7 @@ WORKDIR /app
 COPY .ruby-version Gemfile Gemfile.lock ./
 ENV BUNDLE_GEMFILE=/app/Gemfile
 ENV BUNDLE_PATH=/app/vendor/bundle
-ENV BUNDLE_FROZEN=true
+# ENV BUNDLE_FROZEN=true
 RUN bundle install
 
 EXPOSE 3000
