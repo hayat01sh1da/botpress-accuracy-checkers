@@ -1,0 +1,32 @@
+# Generated from app/queries/accuracy_check_query.rb with RBS::Inline
+
+# rbs_inline: enabled
+class AccuracyCheckQuery
+  INVALID_PATTERNS: ::Regexp
+
+  def initialize: (untyped test_params) -> untyped
+
+  def res_bodies: () -> untyped
+
+  private
+
+  attr_reader scheme: untyped
+
+  attr_reader host: untyped
+
+  attr_reader bot_id: untyped
+
+  attr_reader user_id: untyped
+
+  attr_reader access_token: untyped
+
+  attr_reader test_data: untyped
+
+  attr_reader req: untyped
+
+  def uri: () -> untyped
+
+  def authorize!: () -> untyped
+
+  def request: () -> untyped
+end

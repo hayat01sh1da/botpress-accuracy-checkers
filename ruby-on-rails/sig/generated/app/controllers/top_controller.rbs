@@ -1,0 +1,7 @@
+# Generated from app/controllers/top_controller.rb with RBS::Inline
+
+# rbs_inline: enabled
+class TopController < ApplicationController
+  # GET: /top
+  def index: () -> untyped
+end

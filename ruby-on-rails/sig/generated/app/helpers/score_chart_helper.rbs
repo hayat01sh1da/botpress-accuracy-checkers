@@ -1,0 +1,6 @@
+# Generated from app/helpers/score_chart_helper.rb with RBS::Inline
+
+# rbs_inline: enabled
+module ScoreChartHelper
+  def accuracy: (untyped row) -> untyped
+end
