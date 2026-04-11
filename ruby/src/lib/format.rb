@@ -1,8 +1,11 @@
+# rbs_inline: enabled
+
 require 'csv'
 require 'json'
 
 module Lib
   module Format
+    # @rbs return: Hash[Symbol, (String | Hash[Symbol, untyped])]
     def template
       {
         id: '',
@@ -22,6 +25,8 @@ module Lib
       }
     end
 
+    # @rbs training_data: String
+    # @rbs return: String
     def to_json(training_data)
       result = Array.new
       format = template

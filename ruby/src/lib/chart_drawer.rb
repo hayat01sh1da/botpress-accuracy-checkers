@@ -1,12 +1,18 @@
+# rbs_inline: enabled
+
 require 'csv'
 
 module Lib
   class ChartDrawer
+    # @rbs test_data: String
+    # @rbs res_bodies: Array[Hash[String, untyped]]
+    # @rbs return: void
     def initialize(test_data, res_bodies)
       @test_data  = CSV.read(test_data, headers: true)
       @res_bodies = res_bodies
     end
 
+    # @rbs return: String
     def csv
       CSV.generate(headers:, write_headers: true) { |csv|
         rows.each_with_index { |row, index|
@@ -19,10 +25,12 @@ module Lib
 
     attr_reader :test_data, :res_bodies
 
+    # @rbs return: Array[String]
     def headers
       ['ID', 'Test_Data'].concat(test_data['ID'])
     end
 
+    # @rbs return: Array[Array[Hash[String, (String | Float)]]]
     def score_tables
       res_bodies.map { |res_body|
         (0...res_body['suggestions'].length).map { |index|
@@ -35,6 +43,7 @@ module Lib
       }
     end
 
+    # @rbs return: Array[Array[String]]
     def rows
       score_tables.map { |score_table|
         scores = Array.new
