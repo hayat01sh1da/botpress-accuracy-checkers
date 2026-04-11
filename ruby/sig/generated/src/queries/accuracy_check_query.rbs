@@ -1,0 +1,41 @@
+# Generated from ./src/queries/accuracy_check_query.rb with RBS::Inline
+
+module Queries
+  class AccuracyCheckQuery
+    INVALID_PATTERNS: ::Regexp
+
+    # @rbs scheme: String
+    # @rbs host: String
+    # @rbs bot_id: String
+    # @rbs user_id: String
+    # @rbs test_data: String
+    # @rbs return: void
+    def initialize: (String scheme, String host, String bot_id, String user_id, String test_data) -> void
+
+    # @rbs return: Array[Hash[String, untyped]]
+    def res_bodies: () -> Array[Hash[String, untyped]]
+
+    private
+
+    attr_reader scheme: untyped
+
+    attr_reader host: untyped
+
+    attr_reader bot_id: untyped
+
+    attr_reader user_id: untyped
+
+    attr_reader test_data: untyped
+
+    attr_reader req: untyped
+
+    # @rbs return: URI::Generic
+    def uri: () -> URI::Generic
+
+    # @rbs return: void
+    def authorized: () -> void
+
+    # @rbs return: Array[Net::HTTPResponse]
+    def request: () -> Array[Net::HTTPResponse]
+  end
+end

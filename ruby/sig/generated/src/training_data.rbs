@@ -1,0 +1,21 @@
+# Generated from ./src/training_data.rb with RBS::Inline
+
+class TrainingData
+  include ::Lib::Format
+
+  # @rbs training_data: String
+  # @rbs return: void
+  def initialize: (String training_data) -> void
+
+  # @rbs dirname: String
+  # @rbs return: void
+  def export: (String dirname) -> void
+
+  private
+
+  attr_reader training_data: untyped
+
+  # @rbs dirname: String
+  # @rbs return: String
+  def filename: (String dirname) -> String
+end
