@@ -45,6 +45,11 @@ group :development do
   gem 'rack-mini-profiler', '~> 4.0.1'
   # Static code analysis for security vulnerabilities
   gem 'brakeman', '~> 8.0.4', require: false
+  # RuboCop
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :test do
