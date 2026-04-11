@@ -1,3 +1,4 @@
+# rbs_inline: enabled
 class ScoreChartController < ApplicationController
   include ChartManager
   before_action :clear_tmp_charts, only: [:new]

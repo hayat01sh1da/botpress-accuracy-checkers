@@ -1,3 +1,4 @@
+# rbs_inline: enabled
 module Format
   def template
     {

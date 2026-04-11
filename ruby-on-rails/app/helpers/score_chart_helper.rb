@@ -1,3 +1,4 @@
+# rbs_inline: enabled
 module ScoreChartHelper
   def accuracy(row)
     return unless row.include?('%')
