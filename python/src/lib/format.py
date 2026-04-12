@@ -1,8 +1,9 @@
 import csv
 import json
+from typing import Any
 from list_handler import __uniq_list__
 
-def __template__():
+def __template__() -> dict[str, Any]:
     return {
         'id': '',
         'data': {
@@ -20,7 +21,7 @@ def __template__():
         }
     }
 
-def __to_json__(csv_training_data):
+def __to_json__(csv_training_data: str) -> str:
     result = list()
     format = __template__()
 
