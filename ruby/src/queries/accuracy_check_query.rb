@@ -7,7 +7,7 @@ require 'json'
 module Queries
   class AccuracyCheckQuery
 
-    INVALID_PATTERNS = /[\\\'\'\|\`\^\"\<\>\)\(\}\{\]\[\;\/\?\:\@\&\=\+\$\,\%\# ]/
+    INVALID_PATTERNS = /[\\\'\|\`\^\"\<\>\)\(\}\{\]\[\;\/\?\:\@\&\=\+\$\,\%\# ]/
 
     # @rbs scheme: String
     # @rbs host: String
