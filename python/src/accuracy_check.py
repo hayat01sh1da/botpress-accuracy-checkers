@@ -7,7 +7,7 @@ from accuracy_check_query import AccuracyCheckQuery
 from chart_drawer import ChartDrawer
 
 class AccuracyCheck:
-    def __init__(self, scheme, host, bot_id, user_id, test_data):
+    def __init__(self, scheme: str, host: str, bot_id: str, user_id: str, test_data: str) -> None:
         self.scheme               = scheme
         self.host                 = host
         self.bot_id               = bot_id
@@ -17,11 +17,11 @@ class AccuracyCheck:
         self.res_bodies           = self.accuracy_check_query.res_bodies()
         self.chart_drawer         = ChartDrawer(self.test_data, self.res_bodies)
 
-    def export_chart(self, dirname):
+    def export_chart(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
             self.chart_drawer.csv(f)
 
     # private
 
-    def __filename__(self, dirname):
+    def __filename__(self, dirname: str) -> str:
         return os.path.join(dirname, f'accuracy_score_chart_{datetime.datetime.now():%Y%m%d%H%M%S}.csv')
