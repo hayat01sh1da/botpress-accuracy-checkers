@@ -1,17 +1,19 @@
+# frozen_string_literal: true
+
 D = Steep::Diagnostic
 
 target :app do
-  check "exec"
-  check "src"
-  check "test"
-  signature "sig"
+  check 'exec'
+  check 'src'
+  check 'test'
+  signature 'sig'
 
-  library "csv"
-  library "json"
-  library "fileutils"
-  library "minitest"
-  library "net-http"
-  library "uri"
+  library 'csv'
+  library 'json'
+  library 'fileutils'
+  library 'minitest'
+  library 'net-http'
+  library 'uri'
 
   configure_code_diagnostics(D::Ruby.default)
 end
