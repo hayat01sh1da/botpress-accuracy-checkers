@@ -1,4 +1,4 @@
-# Generated from ./test/training_data_test.rb with RBS::Inline
+# Generated from test/training_data_test.rb with RBS::Inline
 
 class TrainingDataTest < ApplicationTest
   def setup: () -> untyped
