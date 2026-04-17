@@ -37,7 +37,7 @@ module Queries
 
     # @rbs return: URI::Generic
     def uri
-      URI.parse("#{scheme}://#{host}/api/v1/bots/#{bot_id}/converse/#{user_id}/secured?include=suggestions")
+      @uri ||= URI.parse("#{scheme}://#{host}/api/v1/bots/#{bot_id}/converse/#{user_id}/secured?include=suggestions")
     end
 
     # @rbs return: void
