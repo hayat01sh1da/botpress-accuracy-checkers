@@ -3,10 +3,11 @@
 module Lib
   module Format
     # @rbs return: Hash[Symbol, (String | Hash[Symbol, untyped])]
-    def template: () -> Hash[Symbol, String | Hash[Symbol, untyped]]
+    def template: (?untyped array) -> Hash[Symbol, String | Hash[Symbol, untyped]]
 
     # @rbs training_data: String
+    # @rbs array: Array[untyped]
     # @rbs return: String
-    def to_json: (String training_data) -> String
+    def to_json: (String training_data, ?Array[untyped] array) -> String
   end
 end
