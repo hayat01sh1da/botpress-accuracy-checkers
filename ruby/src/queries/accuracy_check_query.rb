@@ -50,7 +50,7 @@ module Queries
     def request
       test_data['Question'].map { |question|
         req.set_form_data(type: :text, text: question)
-        net_http         = Net::HTTP.new(uri.host, uri.port)
+        net_http         = Net::HTTP.new(uri.host.to_s, uri.port)
         net_http.use_ssl = true if uri.to_s.include?('https')
         net_http.start { |http| http.request(req) }
       }
