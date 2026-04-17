@@ -16,7 +16,7 @@ module Lib
     def csv
       CSV.generate(headers:, write_headers: true) { |csv|
         rows.each_with_index { |row, index|
-          csv.add_row([test_data[index]['ID'], test_data[index]['Question']].concat(row))
+          csv << [test_data[index]['ID'], test_data[index]['Question']].concat(row)
         }
       }
     end
