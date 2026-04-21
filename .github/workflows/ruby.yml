@@ -80,7 +80,7 @@ jobs:
           job-name: Minitest
       - name: Minitest
         working-directory: ./ruby
-        run: ruby test/application_test.rb
+        run: rake
   rubocop:
     timeout-minutes: 10
     runs-on: ubuntu-latest
