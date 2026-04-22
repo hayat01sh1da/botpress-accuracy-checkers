@@ -119,8 +119,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-ruby-on-rails
-        with:
-          job-name: RSpec
       - name: RSpec
         working-directory: ./ruby-on-rails
         run: bundle exec rspec
@@ -132,8 +130,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-ruby
-        with:
-          job-name: Brakeman
       - name: Brakeman
         working-directory: ./ruby
         run: brakeman --no-pager
@@ -145,8 +141,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-ruby-on-rails
-        with:
-          job-name: RuboCop
       - name: RuboCop
         working-directory: ./ruby-on-rails
         run: rubocop
@@ -158,8 +152,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-ruby-on-rails
-        with:
-          job-name: Steep
       - name: Steep
         working-directory: ./ruby-on-rails
         run: |
