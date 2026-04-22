@@ -61,9 +61,9 @@ jobs:
   change-detection:
     runs-on: ubuntu-latest
     outputs:
-      ruby-changes: ${{ steps.ruby.outputs.changes }}
-      rubocop-changes: ${{ steps.rubocop.outputs.changes }}
-      # steep-changes: ${{ steps.steep.outputs.changes }}
+      ruby-changes: ${{ steps.change-detection.outputs.ruby }}
+      rubocop-changes: ${{ steps.change-detection.outputs.rubocop}}
+      # steep-changes: ${{ steps.change-detection.outputs.steep}}
     steps:
       - uses: actions/checkout@v6
       - name: Change Detection
@@ -71,46 +71,46 @@ jobs:
         id: change-detection
         with:
           filters: |
-            ruby: |
-              .github/actions/setup-ruby-on-rails/action.yml
-              .github/workflows/ruby-on-rails.yml
-              .ruby-version
-              ruby-on-rails/.ruby-version
-              ruby-on-rails/Gemfile
-              ruby-on-rails/Gemfile.lock
-              ruby-on-rails/Rakefile
-              ruby-on-rails/**/*.rb
-              ruby-on-rails/**/*.rake
-              ruby-on-rails/**/*.yml
-              ruby-on-rails/**/*.js
-              ruby-on-rails/**/*.css
-              ruby-on-rails/**/*.html.erb
-              ruby-on-rails/**/*.csv
-              ruby-on-rails/**/*.json
-            rubocop: |
-              .github/actions/setup-ruby-on-rails/action.yml
-              .github/workflows/ruby-on-rails.yml
-              .ruby-version
-              ruby-on-rails/.ruby-version
-              ruby-on-rails/Gemfile
-              ruby-on-rails/Gemfile.lock
-              ruby-on-rails/Rakefile
-              ruby-on-rails/rubocop.yml
-              ruby-on-rails/rubocop_todo.yml
-              ruby-on-rails/**/*.rb
-              ruby-on-rails/**/*.rake
-            # steep: |
-            #   .github/actions/setup-ruby-on-rails/action.yml
-            #   .github/workflows/ruby-on-rails.yml
-            #   .ruby-version
-            #   ruby-on-rails/.ruby-version
-            #   ruby-on-rails/Gemfile
-            #   ruby-on-rails/Gemfile.lock
-            #   ruby-on-rails/Rakefile
-            #   ruby-on-rails/Steepfile
-            #   ruby-on-rails/**/*.rb
-            #   ruby-on-rails/**/*.rbs
-            #   ruby-on-rails/**/*.rake
+            ruby:
+              - .github/actions/setup-ruby-on-rails/action.yml
+              - .github/workflows/ruby-on-rails.yml
+              - .ruby-version
+              - ruby-on-rails/.ruby-version
+              - ruby-on-rails/Gemfile
+              - ruby-on-rails/Gemfile.lock
+              - ruby-on-rails/Rakefile
+              - ruby-on-rails/**/*.rb
+              - ruby-on-rails/**/*.rake
+              - ruby-on-rails/**/*.yml
+              - ruby-on-rails/**/*.js
+              - ruby-on-rails/**/*.css
+              - ruby-on-rails/**/*.html.erb
+              - ruby-on-rails/**/*.csv
+              - ruby-on-rails/**/*.json
+            rubocop:
+              - .github/actions/setup-ruby-on-rails/action.yml
+              - .github/workflows/ruby-on-rails.yml
+              - .ruby-version
+              - ruby-on-rails/.ruby-version
+              - ruby-on-rails/Gemfile
+              - ruby-on-rails/Gemfile.lock
+              - ruby-on-rails/Rakefile
+              - ruby-on-rails/rubocop.yml
+              - ruby-on-rails/rubocop_todo.yml
+              - ruby-on-rails/**/*.rb
+              - ruby-on-rails/**/*.rake
+            # steep:
+              # - .github/actions/setup-ruby-on-rails/action.yml
+              # - .github/workflows/ruby-on-rails.yml
+              # - .ruby-version
+              # - ruby-on-rails/.ruby-version
+              # - ruby-on-rails/Gemfile
+              # - ruby-on-rails/Gemfile.lock
+              # - ruby-on-rails/Rakefile
+              # - ruby-on-rails/Steepfile
+              # - ruby-on-rails/**/*.rb
+              # - ruby-on-rails/**/*.rbs
+              # - ruby-on-rails/**/*.rake
   rspec:
     timeout-minutes: 10
     runs-on: ubuntu-latest
@@ -131,7 +131,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-ruby-on-rails
       - name: Brakeman
-        working-directory: ./ruby
+        working-directory: ./ruby-on-rails
         run: bundle exec brakeman --no-pager
   rubocop:
     timeout-minutes: 10
