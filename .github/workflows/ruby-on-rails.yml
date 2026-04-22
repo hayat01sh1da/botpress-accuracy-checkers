@@ -98,6 +98,7 @@ jobs:
               ruby-on-rails/rubocop.yml
               ruby-on-rails/rubocop_todo.yml
               ruby-on-rails/**/*.rb
+              ruby-on-rails/**/*.rake
             steep: |
               .github/actions/setup-ruby-on-rails/action.yml
               .github/workflows/ruby-on-rails.yml
