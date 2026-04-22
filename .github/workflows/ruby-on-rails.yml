@@ -12,64 +12,142 @@ on:
     branches:
       - master
     paths:
-      - '.github/workflows/ruby-on-rails.yml'
-      - '.ruby-version'
-      - 'ruby-on-rails/.ruby-version'
-      - 'ruby-on-rails/Gemfile'
-      - 'ruby-on-rails/Gemfile.lock'
-      - 'ruby-on-rails/Rakefile'
-      - 'ruby-on-rails/**/*.rb'
-      - 'ruby-on-rails/**/*.rake'
-      - 'ruby-on-rails/**/*.yml'
-      - 'ruby-on-rails/**/*.js'
-      - 'ruby-on-rails/**/*.css'
-      - 'ruby-on-rails/**/*.html.erb'
-      - 'ruby-on-rails/**/*.csv'
-      - 'ruby-on-rails/**/*.json'
+      - .github/actions/setup-ruby-on-rails/action.yml
+      - .github/workflows/ruby-on-rails.yml
+      - .ruby-version
+      - ruby-on-rails/.ruby-version
+      - ruby-on-rails/Gemfile
+      - ruby-on-rails/Gemfile.lock
+      - ruby-on-rails/Rakefile
+      - ruby-on-rails/rubocop.yml
+      - ruby-on-rails/rubocop_todo.yml
+      # - ruby-on-rails/Steepfile
+      - ruby-on-rails/**/*.rb
+      # - ruby-on-rails/**/*.rbs
+      - ruby-on-rails/**/*.rake
+      - ruby-on-rails/**/*.yml
+      - ruby-on-rails/**/*.js
+      - ruby-on-rails/**/*.css
+      - ruby-on-rails/**/*.html.erb
+      - ruby-on-rails/**/*.csv
+      - ruby-on-rails/**/*.json
   pull_request:
     paths:
-      - '.github/workflows/ruby-on-rails.yml'
-      - '.ruby-version'
-      - 'ruby-on-rails/.ruby-version'
-      - 'ruby-on-rails/Gemfile'
-      - 'ruby-on-rails/Gemfile.lock'
-      - 'ruby-on-rails/Rakefile'
-      - 'ruby-on-rails/**/*.rb'
-      - 'ruby-on-rails/**/*.rake'
-      - 'ruby-on-rails/**/*.yml'
-      - 'ruby-on-rails/**/*.js'
-      - 'ruby-on-rails/**/*.css'
-      - 'ruby-on-rails/**/*.html.erb'
-      - 'ruby-on-rails/**/*.csv'
-      - 'ruby-on-rails/**/*.json'
+      - .github/actions/setup-ruby-on-rails/action.yml
+      - .github/workflows/ruby-on-rails.yml
+      - .ruby-version
+      - ruby-on-rails/.ruby-version
+      - ruby-on-rails/Gemfile
+      - ruby-on-rails/Gemfile.lock
+      - ruby-on-rails/Rakefile
+      - ruby-on-rails/rubocop.yml
+      - ruby-on-rails/rubocop_todo.yml
+      # - ruby-on-rails/Steepfile
+      - ruby-on-rails/**/*.rb
+      # - ruby-on-rails/**/*.rbs
+      - ruby-on-rails/**/*.rake
+      - ruby-on-rails/**/*.yml
+      - ruby-on-rails/**/*.js
+      - ruby-on-rails/**/*.css
+      - ruby-on-rails/**/*.html.erb
+      - ruby-on-rails/**/*.csv
+      - ruby-on-rails/**/*.json
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
-  test:
+  change-detection:
+    runs-on: ubuntu-latest
+    outputs:
+      ruby-changes: ${{ steps.ruby.outputs.changes }}
+      rubocop-changes: ${{ steps.rubocop.outputs.changes }}
+      # steep-changes: ${{ steps.steep.outputs.changes }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Change Detection
+        uses: dorny/paths-filter@v4
+        id: change-detection
+        with:
+          filters: |
+            ruby: |
+              .github/actions/setup-ruby-on-rails/action.yml
+              .github/workflows/ruby-on-rails.yml
+              .ruby-version
+              ruby-on-rails/.ruby-version
+              ruby-on-rails/Gemfile
+              ruby-on-rails/Gemfile.lock
+              ruby-on-rails/Rakefile
+              ruby-on-rails/**/*.rb
+              ruby-on-rails/**/*.rake
+              ruby-on-rails/**/*.yml
+              ruby-on-rails/**/*.js
+              ruby-on-rails/**/*.css
+              ruby-on-rails/**/*.html.erb
+              ruby-on-rails/**/*.csv
+              ruby-on-rails/**/*.json
+            rubocop: |
+              .github/actions/setup-ruby-on-rails/action.yml
+              .github/workflows/ruby-on-rails.yml
+              .ruby-version
+              ruby-on-rails/.ruby-version
+              ruby-on-rails/Gemfile
+              ruby-on-rails/Gemfile.lock
+              ruby-on-rails/Rakefile
+              ruby-on-rails/rubocop.yml
+              ruby-on-rails/rubocop_todo.yml
+              ruby-on-rails/**/*.rb
+            steep: |
+              .github/actions/setup-ruby-on-rails/action.yml
+              .github/workflows/ruby-on-rails.yml
+              .ruby-version
+              ruby-on-rails/.ruby-version
+              ruby-on-rails/Gemfile
+              ruby-on-rails/Gemfile.lock
+              ruby-on-rails/Rakefile
+              ruby-on-rails/Steepfile
+              ruby-on-rails/**/*.rb
+              ruby-on-rails/**/*.rbs
+              ruby-on-rails/**/*.rake
+  rspec:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    needs: change-detection
+    if: needs.change-detection.outputs.ruby-changes == 'true'
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-      # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
-      # change this to (see https://github.com/ruby/setup-ruby#versioning):
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-ruby-on-rails
         with:
-          bundler-cache: true
-      - name: Install Gem Dependencies
-        working-directory: ./ruby-on-rails
-        run: |
-          bundle config set --local path 'vendor/bundle'
-          bundle install
-      - name: Run RSpec
+          job-name: RSpec
+      - name: RSpec
         working-directory: ./ruby-on-rails
         run: bundle exec rspec
-      - name: Run Brakeman
+  rubocop:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    needs: change-detection
+    if: needs.change-detection.outputs.rubocop-changes == 'true'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/setup-ruby-on-rails
+        with:
+          job-name: RuboCop
+      - name: RuboCop
         working-directory: ./ruby-on-rails
-        run: bundle exec brakeman --no-pager
-      - name: Run RuboCop
-        working-directory: ./ruby-on-rails
-        run: bundle exec rubocop
+        run: rubocop
+  # steep:
+  #   timeout-minutes: 10
+  #   runs-on: ubuntu-latest
+  #   needs: change-detection
+  #   if: needs.change-detection.outputs.steep-changes == 'true'
+  #   steps:
+  #     - uses: actions/checkout@v6
+  #     - uses: ./.github/actions/setup-ruby-on-rails
+  #       with:
+  #         job-name: Steep
+  #     - name: Steep
+  #       working-directory: ./ruby-on-rails
+  #       run: |
+  #         rbs-inline --output sig/generated/ .
+  #         steep check
