@@ -1,9 +1,10 @@
 import csv
 import json
+from typing import Any, TextIO
 from list_handler import __csv_to_dicts__
 
 class ChartDrawer:
-    def __init__(self, test_data, res_bodies):
+    def __init__(self, test_data: str, res_bodies: list[dict[str, Any]]) -> None:
         self.test_data  = __csv_to_dicts__(test_data)
         self.res_bodies = res_bodies
         self.ids        = [test_datum['ID'] for test_datum in self.test_data]
@@ -11,7 +12,7 @@ class ChartDrawer:
         self.answers    = [test_datum['Answer'] for test_datum in self.test_data]
         self.header     = ['ID', 'Test_Data'] + self.ids
 
-    def csv(self, f):
+    def csv(self, f: TextIO) -> None:
         writer = csv.writer(f)
         writer.writerow(self.header)
         i = 0
@@ -21,7 +22,7 @@ class ChartDrawer:
 
     # private
 
-    def __score_tables__(self):
+    def __score_tables__(self) -> list[list[dict[str, float]]]:
         score_tables = list()
         for res_body in self.res_bodies:
             _score_tables = list()
@@ -34,7 +35,7 @@ class ChartDrawer:
             score_tables.append(_score_tables)
         return score_tables
 
-    def __rows__(self):
+    def __rows__(self) -> list[list[str]]:
         rows = list()
         for s_tables in self.__score_tables__():
             scores  = list()
