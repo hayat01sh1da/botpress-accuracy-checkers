@@ -132,7 +132,7 @@ jobs:
       - uses: ./.github/actions/setup-ruby
       - name: Brakeman
         working-directory: ./ruby
-        run: brakeman --no-pager
+        run: bundle exec brakeman --no-pager
   rubocop:
     timeout-minutes: 10
     runs-on: ubuntu-latest
@@ -143,7 +143,7 @@ jobs:
       - uses: ./.github/actions/setup-ruby-on-rails
       - name: RuboCop
         working-directory: ./ruby-on-rails
-        run: rubocop
+        run: bundle exec rubocop
   steep:
     timeout-minutes: 10
     runs-on: ubuntu-latest
@@ -155,5 +155,5 @@ jobs:
       - name: Steep
         working-directory: ./ruby-on-rails
         run: |
-          rbs-inline --output sig/generated/ .
-          steep check
+          bundle exec rbs-inline --output sig/generated/ .
+          bundle exec steep check
