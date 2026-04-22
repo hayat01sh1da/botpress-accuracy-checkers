@@ -131,7 +131,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-ruby-on-rails
       - name: Brakeman
-        working-directory: ./ruby
+        working-directory: ./ruby-on-rails
         run: bundle exec brakeman --no-pager
   rubocop:
     timeout-minutes: 10
