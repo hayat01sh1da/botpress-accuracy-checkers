@@ -2,8 +2,8 @@
 
 module Lib
   module Format
-    # @rbs return: Hash[Symbol, (String | Hash[Symbol, (String | Array[String] | String) | Hash[Array[String]]])]
-    def template: (?untyped array) -> Hash[Symbol, String | Hash[Symbol, String | Array[String] | String | Hash[Array[String]]]]
+    # @rbs return: Hash[Symbol, untyped]
+    def template: (?untyped array) -> Hash[Symbol, untyped]
 
     # @rbs training_data: String
     # @rbs array: Array[untyped]
