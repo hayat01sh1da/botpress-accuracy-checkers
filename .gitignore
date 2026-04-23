@@ -7,7 +7,6 @@ ruby-on-rails/tmp/
 
 # Ruby
 
-ruby/vendor/bundle/**
 ruby/test/tmp
 
 # Python
