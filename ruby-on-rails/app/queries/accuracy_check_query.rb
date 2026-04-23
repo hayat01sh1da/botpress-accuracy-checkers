@@ -1,4 +1,5 @@
 # rbs_inline: enabled
+
 class AccuracyCheckQuery
 
   INVALID_PATTERNS = /[\\\'\|\`\^\"\<\>\)\(\}\{\]\[\;\/\?\:\@\&\=\+\$\,\%\# ]/

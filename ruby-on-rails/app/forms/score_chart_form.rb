@@ -1,4 +1,5 @@
 # rbs_inline: enabled
+
 class ScoreChartForm < ApplicationForm
   attr_accessor :scheme, :host, :bot_id, :user_id, :access_token, :test_data
   validates :scheme,       presence: true
