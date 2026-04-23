@@ -1,3 +1,5 @@
+# rbs_inline: enabled
+
 require_relative '../src/accuracy_check'
 
 scheme    = 'https'
