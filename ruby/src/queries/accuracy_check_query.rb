@@ -1,3 +1,5 @@
+# rbs_inline: enabled
+
 require 'net/http'
 require 'csv'
 require 'json'
@@ -7,6 +9,12 @@ module Queries
 
     INVALID_PATTERNS = /[\\\'\|\`\^\"\<\>\)\(\}\{\]\[\;\/\?\:\@\&\=\+\$\,\%\# ]/
 
+    # @rbs scheme: String
+    # @rbs host: String
+    # @rbs bot_id: String
+    # @rbs user_id: String
+    # @rbs test_data: String
+    # @rbs return: void
     def initialize(scheme, host, bot_id, user_id, test_data)
       @scheme    = scheme.gsub(INVALID_PATTERNS, '')
       @host      = host.gsub(INVALID_PATTERNS, '')
@@ -15,6 +23,7 @@ module Queries
       @test_data = CSV.read(test_data, headers: true)
     end
 
+    # @rbs return: Array[Hash[String, untyped]]
     def res_bodies
       authorized
       request.map(&:body).map do |res_body|
@@ -26,21 +35,24 @@ module Queries
 
     attr_reader :scheme, :host, :bot_id, :user_id, :test_data, :req
 
+    # @rbs return: URI::Generic
     def uri
-      URI.parse("#{scheme}://#{host}/api/v1/bots/#{bot_id}/converse/#{user_id}/secured?include=suggestions")
+      @uri ||= URI.parse("#{scheme}://#{host}/api/v1/bots/#{bot_id}/converse/#{user_id}/secured?include=suggestions")
     end
 
+    # @rbs return: void
     def authorized
       @req                 = Net::HTTP::Post.new(uri)
       @req[:authorization] = ENV['BOTPRESS_ACCESS_TOKEN']
     end
 
+    # @rbs return: Array[Net::HTTPResponse]
     def request
       test_data['Question'].map { |question|
         req.set_form_data(type: :text, text: question)
-        net_http         = Net::HTTP.new(uri.host, uri.port)
+        net_http         = Net::HTTP.new(uri.host.to_s, uri.port)
         net_http.use_ssl = true if uri.to_s.include?('https')
-        net_http.start { it.request(req) }
+        net_http.start { |http| http.request(req) }
       }
     end
   end

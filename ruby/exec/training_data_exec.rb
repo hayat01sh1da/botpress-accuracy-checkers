@@ -1,3 +1,5 @@
+# rbs_inline: enabled
+
 require_relative '../src/training_data'
 
 csv_training_data = File.join('..', 'csv', 'training_data.csv')

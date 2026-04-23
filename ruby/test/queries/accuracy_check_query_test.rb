@@ -1,3 +1,5 @@
+# rbs_inline: enabled
+
 # require 'csv'
 # require 'json'
 # require_relative '../application_test'
