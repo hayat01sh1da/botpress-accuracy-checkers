@@ -6,7 +6,7 @@ ruby-on-rails/log/
 ruby-on-rails/tmp/
 
 # Ruby
-ruby/sig/
+
 ruby/test/tmp
 
 # Python
