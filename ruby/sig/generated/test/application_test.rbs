@@ -1,0 +1,11 @@
+# Generated from test/application_test.rb with RBS::Inline
+
+class ApplicationTest < Minitest::Test
+  def setup: () -> untyped
+
+  def teardown: () -> untyped
+
+  private
+
+  attr_reader dirname: untyped
+end
