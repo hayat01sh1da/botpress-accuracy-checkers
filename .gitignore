@@ -6,7 +6,6 @@ ruby-on-rails/log/
 ruby-on-rails/tmp/
 
 # Ruby
-
 ruby/test/tmp
 
 # Python
