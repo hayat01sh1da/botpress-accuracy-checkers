@@ -19,8 +19,8 @@ on:
       - ruby-on-rails/Gemfile
       - ruby-on-rails/Gemfile.lock
       - ruby-on-rails/Rakefile
-      - ruby-on-rails/rubocop.yml
-      - ruby-on-rails/rubocop_todo.yml
+      - ruby-on-rails/.rubocop.yml
+      - ruby-on-rails/.rubocop_todo.yml
       # - ruby-on-rails/Steepfile
       - ruby-on-rails/**/*.rb
       # - ruby-on-rails/**/*.rbs
@@ -40,8 +40,8 @@ on:
       - ruby-on-rails/Gemfile
       - ruby-on-rails/Gemfile.lock
       - ruby-on-rails/Rakefile
-      - ruby-on-rails/rubocop.yml
-      - ruby-on-rails/rubocop_todo.yml
+      - ruby-on-rails/.rubocop.yml
+      - ruby-on-rails/.rubocop_todo.yml
       # - ruby-on-rails/Steepfile
       - ruby-on-rails/**/*.rb
       # - ruby-on-rails/**/*.rbs
@@ -95,8 +95,8 @@ jobs:
               - ruby-on-rails/Gemfile
               - ruby-on-rails/Gemfile.lock
               - ruby-on-rails/Rakefile
-              - ruby-on-rails/rubocop.yml
-              - ruby-on-rails/rubocop_todo.yml
+              - ruby-on-rails/.rubocop.yml
+              - ruby-on-rails/.rubocop_todo.yml
               - ruby-on-rails/**/*.rb
               - ruby-on-rails/**/*.rake
             # steep:
