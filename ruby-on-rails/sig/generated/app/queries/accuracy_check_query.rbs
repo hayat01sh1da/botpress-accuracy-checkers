@@ -1,6 +1,5 @@
 # Generated from app/queries/accuracy_check_query.rb with RBS::Inline
 
-# rbs_inline: enabled
 class AccuracyCheckQuery
   INVALID_PATTERNS: ::Regexp
 

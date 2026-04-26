@@ -1,6 +1,5 @@
 # Generated from app/forms/application_form.rb with RBS::Inline
 
-# rbs_inline: enabled
 class ApplicationForm
   include ActiveModel::Model
 end

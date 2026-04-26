@@ -1,6 +1,5 @@
 # Generated from app/controllers/score_chart_controller.rb with RBS::Inline
 
-# rbs_inline: enabled
 class ScoreChartController < ApplicationController
   include ChartManager
 

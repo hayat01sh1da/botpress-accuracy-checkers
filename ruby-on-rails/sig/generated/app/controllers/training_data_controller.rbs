@@ -1,6 +1,5 @@
 # Generated from app/controllers/training_data_controller.rb with RBS::Inline
 
-# rbs_inline: enabled
 class TrainingDataController < ApplicationController
   include Format
 
