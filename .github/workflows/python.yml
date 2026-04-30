@@ -11,6 +11,9 @@ on:
       - .github/actions/setup-python/action.yml
       - .github/workflows/python.yml
       - .python-version
+      - requirements.txt
+      - requirements.lock
+      - pyproject.toml
       - python/run_unittests.sh
       - python/**/*.py
   pull_request:
@@ -18,6 +21,9 @@ on:
       - .github/actions/setup-python/action.yml
       - .github/workflows/python.yml
       - .python-version
+      - requirements.txt
+      - requirements.lock
+      - pyproject.toml
       - python/run_unittests.sh
       - python/**/*.py
 
@@ -25,9 +31,31 @@ permissions:
   contents: read
 
 jobs:
+  change-detection:
+    runs-on: ubuntu-latest
+    outputs:
+      python-changes: ${{ steps.change-detection.outputs.python }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Change Detection
+        uses: dorny/paths-filter@v4
+        id: change-detection
+        with:
+          filters: |
+            python:
+            - .github/actions/setup-python/action.yml
+            - .github/workflows/python.yml
+            - .python-version
+            - requirements.txt
+            - requirements.lock
+            - pyproject.toml
+            - python/run_unittests.sh
+            - python/**/*.py
   flake8:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    needs: change-detection
+    if: needs.change-detection.outputs.python-changes == 'true'
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-python
@@ -41,6 +69,8 @@ jobs:
   unittest:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    needs: change-detection
+    if: needs.change-detection.outputs.python-changes == 'true'
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-python
@@ -50,6 +80,8 @@ jobs:
   mypy:
     timeout-minutes: 10
     runs-on: ubuntu-latest
+    needs: change-detection
+    if: needs.change-detection.outputs.python-changes == 'true'
     steps:
       - uses: actions/checkout@v6
       - uses: ./.github/actions/setup-python
