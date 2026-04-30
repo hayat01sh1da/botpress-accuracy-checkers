@@ -14,7 +14,6 @@ on:
       - requirements.txt
       - requirements.lock
       - pyproject.toml
-      - python/run_unittests.sh
       - python/**/*.py
   pull_request:
     paths:
@@ -24,11 +23,11 @@ on:
       - requirements.txt
       - requirements.lock
       - pyproject.toml
-      - python/run_unittests.sh
       - python/**/*.py
 
 permissions:
   contents: read
+  pull-requests: read
 
 jobs:
   change-detection:
@@ -49,7 +48,6 @@ jobs:
             - requirements.txt
             - requirements.lock
             - pyproject.toml
-            - python/run_unittests.sh
             - python/**/*.py
   flake8:
     timeout-minutes: 10
