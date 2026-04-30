@@ -76,7 +76,7 @@ jobs:
       - uses: ./.github/actions/setup-python
       - name: UnitTest
         working-directory: ./python
-        run: bash run_unittests.sh
+        run: python -m unittest discover ./test
   mypy:
     timeout-minutes: 10
     runs-on: ubuntu-latest
