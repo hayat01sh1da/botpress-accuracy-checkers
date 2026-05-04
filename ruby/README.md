@@ -12,7 +12,6 @@ $ bundle lock --add-checksums
 ## 3. Bulk Execution of Unit Tests
 
 ```command
-$ cd ./ruby
 $ rake
 Run options: --seed 32524
 
