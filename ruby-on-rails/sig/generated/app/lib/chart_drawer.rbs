@@ -1,0 +1,19 @@
+# Generated from app/lib/chart_drawer.rb with RBS::Inline
+
+class ChartDrawer
+  def initialize: (untyped test_data, untyped res_bodies) -> untyped
+
+  def csv: () -> untyped
+
+  private
+
+  attr_reader test_data: untyped
+
+  attr_reader res_bodies: untyped
+
+  def headers: () -> untyped
+
+  def score_tables: () -> untyped
+
+  def rows: () -> untyped
+end

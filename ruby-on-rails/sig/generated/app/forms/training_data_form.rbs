@@ -1,0 +1,5 @@
+# Generated from app/forms/training_data_form.rb with RBS::Inline
+
+class TrainingDataForm < ApplicationForm
+  attr_accessor training_data: untyped
+end

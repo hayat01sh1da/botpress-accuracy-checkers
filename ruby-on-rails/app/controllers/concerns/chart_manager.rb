@@ -1,3 +1,5 @@
+# rbs_inline: enabled
+
 module ChartManager
   PATH = Rails.root.join('tmp', 'downloads')
 

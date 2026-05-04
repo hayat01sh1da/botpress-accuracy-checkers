@@ -1,0 +1,25 @@
+# Generated from app/controllers/score_chart_controller.rb with RBS::Inline
+
+class ScoreChartController < ApplicationController
+  include ChartManager
+
+  # GET: /score_chart/new
+  def new: () -> untyped
+
+  # POST: /score_chart
+  def create: () -> untyped
+
+  # GET: /score_chart/draw
+  def draw: () -> untyped
+
+  # GET: /score_chart/download
+  def download: () -> untyped
+
+  private
+
+  def test_params: () -> untyped
+
+  def filename: () -> untyped
+
+  def redirect_to_new_score_chart_url: () -> untyped
+end

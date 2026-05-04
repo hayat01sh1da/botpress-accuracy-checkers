@@ -12,8 +12,6 @@ gem 'sprockets-rails', '~> 3.5.2'
 
 gem 'dotenv-rails', '~> 3.2.0'
 
-gem 'nokogiri', '~> 1.19.3'
-
 gem 'rexml', '~> 3.4.4'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -24,9 +22,6 @@ gem 'csv', '~> 3.3.5'
 
 # Data structure, similar to a Hash, that allows the definition of arbitrary attributes with their accompanying values
 gem 'ostruct', '~> 0.6.3'
-
-# A foreign function interface (FFI) is a mechanism by which a program written in one programming language can call routines or make use of services written or compiled in another one
-gem 'ffi', '~> 1.17.4'
 
 group :development, :test do
   # Debug tool used with binding.irb. Explicit require avoids eager loading `debug/prelude`
@@ -50,6 +45,9 @@ group :development do
   gem 'rubocop-performance', '~> 1.26.0', require: false
   gem 'rubocop-rails', '~> 2.34.3', require: false
   gem 'rubocop-rspec', '~> 3.9.0', require: false
+  # Typechecking
+  gem 'rbs-inline', '~> 0.13.0', require: false
+  gem 'steep', '~> 1.10.0', require: false
 end
 
 group :test do

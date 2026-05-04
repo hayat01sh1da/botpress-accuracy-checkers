@@ -1,0 +1,5 @@
+# Generated from app/forms/application_form.rb with RBS::Inline
+
+class ApplicationForm
+  include ActiveModel::Model
+end

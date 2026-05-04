@@ -1,0 +1,7 @@
+# Generated from app/controllers/concerns/format.rb with RBS::Inline
+
+module Format
+  def template: () -> untyped
+
+  def to_json: (untyped training_data) -> untyped
+end

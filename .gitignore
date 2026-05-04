@@ -1,8 +1,10 @@
 # Ruby on Rails App
 
 ruby-on-rails/.env
+ruby-on-rails/.gem_rbs_collection/
 ruby-on-rails/.gitignore
 ruby-on-rails/log/
+ruby-on-rails/sig/generated/vendor/
 ruby-on-rails/tmp/
 
 # Ruby
