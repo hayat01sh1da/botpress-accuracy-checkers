@@ -2,23 +2,24 @@
 
 - Python 3.14.4
 
-## 2. Bulk Execution of Unit Tests
+## 2. Install Libraries via requirements.txt
 
 ```command
-$ bash run_unittests.sh 
-.
-----------------------------------------------------------------------
-Ran 1 test in 0.046s
+$ pip install -r requirements.txt
+```
 
-OK
+## 3. Unit Tests
 
-----------------------------------------------------------------------
-Ran 0 tests in 0.000s
+```command
+$ pytest 
+============================= test session starts ==============================
+platform linux -- Python 3.14.4, pytest-9.0.3, pluggy-1.6.0
+rootdir: /mnt/c/Users/binlh/Documents/development/botpress-accuracy-checkers/python
+configfile: pyproject.toml
+collected 2 items
 
-NO TESTS RAN
-.
-----------------------------------------------------------------------
-Ran 1 test in 0.065s
+test/lib/test_chart_drawer.py .                                          [ 50%]
+test/test_training_data.py .                                             [100%]
 
-OK
+============================== 2 passed in 0.47s ===============================
 ```
