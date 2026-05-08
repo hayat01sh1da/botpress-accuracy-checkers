@@ -1,21 +1,29 @@
+from chart_drawer import ChartDrawer
+from accuracy_check_query import AccuracyCheckQuery
 import os
 import datetime
 import sys
 sys.path.append('./src/lib')
 sys.path.append('./src/queries')
-from accuracy_check_query import AccuracyCheckQuery
-from chart_drawer import ChartDrawer
+
 
 class AccuracyCheck:
-    def __init__(self, scheme: str, host: str, bot_id: str, user_id: str, test_data: str) -> None:
-        self.scheme               = scheme
-        self.host                 = host
-        self.bot_id               = bot_id
-        self.user_id              = user_id
-        self.test_data            = test_data
-        self.accuracy_check_query = AccuracyCheckQuery(self.scheme, self.host, self.bot_id, self.user_id, self.test_data)
-        self.res_bodies           = self.accuracy_check_query.res_bodies()
-        self.chart_drawer         = ChartDrawer(self.test_data, self.res_bodies)
+    def __init__(
+            self,
+            scheme: str,
+            host: str,
+            bot_id: str,
+            user_id: str,
+            test_data: str) -> None:
+        self.scheme = scheme
+        self.host = host
+        self.bot_id = bot_id
+        self.user_id = user_id
+        self.test_data = test_data
+        self.accuracy_check_query = AccuracyCheckQuery(
+            self.scheme, self.host, self.bot_id, self.user_id, self.test_data)
+        self.res_bodies = self.accuracy_check_query.res_bodies()
+        self.chart_drawer = ChartDrawer(self.test_data, self.res_bodies)
 
     def export_chart(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
@@ -24,4 +32,6 @@ class AccuracyCheck:
     # private
 
     def __filename__(self, dirname: str) -> str:
-        return os.path.join(dirname, f'accuracy_score_chart_{datetime.datetime.now():%Y%m%d%H%M%S}.csv')
+        return os.path.join(
+            dirname, f'accuracy_score_chart_{
+                datetime.datetime.now():%Y%m%d%H%M%S}.csv')

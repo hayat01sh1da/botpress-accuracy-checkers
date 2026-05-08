@@ -1,8 +1,9 @@
+from format import __to_json__
 import os
 import datetime
 import sys
 sys.path.append('./src/lib')
-from format import __to_json__
+
 
 class TrainingData:
     def __init__(self, training_data: str) -> None:
@@ -15,4 +16,6 @@ class TrainingData:
     # private
 
     def __filename__(self, dirname: str) -> str:
-        return os.path.join(dirname, f'training_data_{datetime.datetime.now():%Y%m%d%H%M%S}.json')
+        return os.path.join(
+            dirname, f'training_data_{
+                datetime.datetime.now():%Y%m%d%H%M%S}.json')

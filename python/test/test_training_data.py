@@ -1,10 +1,11 @@
+from test_application import TestApplication
+from training_data import TrainingData
 import unittest
 import os
 import glob
 import sys
 sys.path.append('./src')
-from training_data import TrainingData
-from test_application import TestApplication
+
 
 class TestTrainingData(TestApplication):
     def setUp(self) -> None:
@@ -15,6 +16,7 @@ class TestTrainingData(TestApplication):
     def test_export(self) -> None:
         self.training_data.export(self.dirname)
         self.assertTrue(any(glob.glob(f'{self.dirname}/training_data*.json')))
+
 
 if __name__ == '__main__':
     unittest.main()
