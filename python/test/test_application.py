@@ -3,11 +3,17 @@ import os
 import shutil
 import glob
 
+
 class TestApplication(unittest.TestCase):
     def setUp(self) -> None:
-        self.dirname  = os.path.join('test', 'tmp')
-        self.pycaches = glob.glob(os.path.join('.', '**', '__pycache__'), recursive = True)
-        os.makedirs(self.dirname, exist_ok = True)
+        self.dirname = os.path.join('test', 'tmp')
+        self.pycaches = glob.glob(
+            os.path.join(
+                '.',
+                '**',
+                '__pycache__'),
+            recursive=True)
+        os.makedirs(self.dirname, exist_ok=True)
 
     def tearDown(self) -> None:
         if os.path.exists(self.dirname):
@@ -15,6 +21,7 @@ class TestApplication(unittest.TestCase):
         for pycache in self.pycaches:
             if os.path.exists(pycache):
                 shutil.rmtree(pycache)
+
 
 if __name__ == '__main__':
     unittest.main()
