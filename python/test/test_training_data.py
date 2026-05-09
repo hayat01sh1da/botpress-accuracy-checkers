@@ -1,10 +1,10 @@
-from test_application import TestApplication
-from training_data import TrainingData
 import unittest
 import os
 import glob
 import sys
 sys.path.append('./src')
+from test_application import TestApplication
+from training_data import TrainingData
 
 
 class TestTrainingData(TestApplication):
