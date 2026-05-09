@@ -3,6 +3,7 @@ import json
 from typing import Any
 from list_handler import __uniq_list__
 
+
 def __template__() -> dict[str, Any]:
     return {
         'id': '',
@@ -13,13 +14,14 @@ def __template__() -> dict[str, Any]:
             'answers': {
                 'ja': ['']
             },
-        'questions': {
-            'ja': []
-        },
-        'redirectFlow': '',
-        'redirectNode': ''
+            'questions': {
+                'ja': []
+            },
+            'redirectFlow': '',
+            'redirectNode': ''
         }
     }
+
 
 def __to_json__(csv_training_data: str) -> str:
     result = list()
@@ -29,13 +31,18 @@ def __to_json__(csv_training_data: str) -> str:
         training_data = csv.DictReader(f)
         for training_datum in training_data:
             if format['data']['answers']['ja'][-1] == training_datum['Answer']:
-                format['data']['questions']['ja'].append(training_datum['Question'])
+                format['data']['questions']['ja'].append(
+                    training_datum['Question'])
             else:
-                format       = __template__()
+                format = __template__()
                 format['id'] = training_datum['ID']
-                format['data']['questions']['ja'].append(training_datum['Question'])
+                format['data']['questions']['ja'].append(
+                    training_datum['Question'])
                 format['data']['answers']['ja'].remove('')
-                format['data']['answers']['ja'].append(training_datum['Answer'])
-            format['data']['questions']['ja'] = __uniq_list__(format['data']['questions']['ja'])
+                format['data']['answers']['ja'].append(
+                    training_datum['Answer'])
+            format['data']['questions']['ja'] = __uniq_list__(
+                format['data']['questions']['ja'])
             result.append(format)
-    return json.dumps({ 'qnas': __uniq_list__(result) }, ensure_ascii = False, indent = 2)
+    return json.dumps({'qnas': __uniq_list__(result)},
+                      ensure_ascii=False, indent=2)
