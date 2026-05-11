@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # rbs_inline: enabled
 
 # require_relative './application_test'
