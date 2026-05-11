@@ -1,6 +1,6 @@
 # Generated from test/training_data_test.rb with RBS::Inline
 
-class TrainingDataTest < ApplicationTest
+class DataTrainerTest < ApplicationTest
   def setup: () -> untyped
 
   def teardown: () -> untyped
@@ -9,5 +9,5 @@ class TrainingDataTest < ApplicationTest
 
   private
 
-  attr_reader training_data: untyped
+  attr_reader data_trainer: untyped
 end

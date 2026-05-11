@@ -4,17 +4,17 @@ import glob
 import sys
 sys.path.append('./src')
 from test_application import TestApplication
-from training_data import TrainingData
+from data_trainer import DataTrainer
 
 
-class TestTrainingData(TestApplication):
+class TestDataTrainer(TestApplication):
     def setUp(self) -> None:
         super().setUp()
-        training_data = os.path.join('..', 'csv', 'training_data.csv')
-        self.training_data = TrainingData(training_data)
+        data_trainer = os.path.join('..', 'csv', 'training_data.csv')
+        self.data_trainer = DataTrainer(data_trainer)
 
     def test_export(self) -> None:
-        self.training_data.export(self.dirname)
+        self.data_trainer.export(self.dirname)
         self.assertTrue(any(glob.glob(f'{self.dirname}/training_data*.json')))
 
 

@@ -85,7 +85,7 @@ Style/Documentation:
     - 'src/lib/chart_drawer.rb'
     - 'src/lib/format.rb'
     - 'src/queries/accuracy_check_query.rb'
-    - 'src/training_data.rb'
+    - 'src/data_trainer.rb'
 
 # Offense count: 3
 # This cop supports safe autocorrection (--autocorrect).
@@ -124,7 +124,7 @@ Style/FrozenStringLiteralComment:
     - 'src/lib/chart_drawer.rb'
     - 'src/lib/format.rb'
     - 'src/queries/accuracy_check_query.rb'
-    - 'src/training_data.rb'
+    - 'src/data_trainer.rb'
     - 'test/accuracy_check_test.rb'
     - 'test/application_test.rb'
     - 'test/lib/chart_drawer_test.rb'
@@ -136,7 +136,7 @@ Style/FrozenStringLiteralComment:
 Style/RedundantCurrentDirectoryInPath:
   Exclude:
     - 'src/accuracy_reporter.rb'
-    - 'src/training_data.rb'
+    - 'src/data_trainer.rb'
     - 'test/training_data_test.rb'
 
 # Offense count: 1
@@ -151,7 +151,7 @@ Style/RedundantRegexpEscape:
   Exclude:
     - 'src/accuracy_reporter.rb'
     - 'src/queries/accuracy_check_query.rb'
-    - 'src/training_data.rb'
+    - 'src/data_trainer.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).

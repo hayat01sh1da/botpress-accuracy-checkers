@@ -1,14 +1,14 @@
 # rbs_inline: enabled
 
 require_relative './application_test'
-require_relative '../src/training_data'
+require_relative '../src/data_trainer'
 require_relative '../src/lib/format'
 
-class TrainingDataTest < ApplicationTest
+class DataTrainerTest < ApplicationTest
   def setup
     super
-    training_data  = File.join('..', 'csv', 'training_data.csv')
-    @training_data = TrainingData.new(training_data)
+    data_trainer  = File.join('..', 'csv', 'training_data.csv')
+    @data_trainer = DataTrainer.new(data_trainer)
   end
 
   def teardown
@@ -16,11 +16,11 @@ class TrainingDataTest < ApplicationTest
   end
 
   def test_export
-    training_data.export(dirname)
+    data_trainer.export(dirname)
     assert Dir[File.join(dirname, 'training_data*.json')].any?
   end
 
   private
 
-  attr_reader :training_data
+  attr_reader :data_trainer
 end
