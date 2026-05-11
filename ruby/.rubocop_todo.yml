@@ -81,7 +81,7 @@ Style/Documentation:
   Exclude:
     - 'spec/**/*'
     - 'test/**/*'
-    - 'src/accuracy_check.rb'
+    - 'src/accuracy_reporter.rb'
     - 'src/lib/chart_drawer.rb'
     - 'src/lib/format.rb'
     - 'src/queries/accuracy_check_query.rb'
@@ -120,7 +120,7 @@ Style/FrozenStringLiteralComment:
     - 'Rakefile'
     - 'exec/accuracy_check_exec.rb'
     - 'exec/training_data_exec.rb'
-    - 'src/accuracy_check.rb'
+    - 'src/accuracy_reporter.rb'
     - 'src/lib/chart_drawer.rb'
     - 'src/lib/format.rb'
     - 'src/queries/accuracy_check_query.rb'
@@ -135,7 +135,7 @@ Style/FrozenStringLiteralComment:
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantCurrentDirectoryInPath:
   Exclude:
-    - 'src/accuracy_check.rb'
+    - 'src/accuracy_reporter.rb'
     - 'src/training_data.rb'
     - 'test/training_data_test.rb'
 
@@ -149,7 +149,7 @@ Style/RedundantRegexpArgument:
 # This cop supports safe autocorrection (--autocorrect).
 Style/RedundantRegexpEscape:
   Exclude:
-    - 'src/accuracy_check.rb'
+    - 'src/accuracy_reporter.rb'
     - 'src/queries/accuracy_check_query.rb'
     - 'src/training_data.rb'
 

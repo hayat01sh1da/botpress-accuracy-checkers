@@ -3,7 +3,7 @@
 require_relative './queries/accuracy_check_query'
 require_relative './lib/chart_drawer'
 
-class AccuracyCheck
+class AccuracyReporter
   # @rbs scheme: String
   # @rbs host: String
   # @rbs bot_id: String

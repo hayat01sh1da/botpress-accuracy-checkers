@@ -1,9 +1,9 @@
 # rbs_inline: enabled
 
 # require_relative './application_test'
-# require_relative '../src/accuracy_check'
+# require_relative '../src/accuracy_reporter'
 
-# class AccuracyCheckTest < ApplicationTest
+# class AccuracyReporterTest < ApplicationTest
 #   def setup
 #     super
 #     scheme          = 'https'
@@ -11,7 +11,7 @@
 #     bot_id          = 'sample-bot'
 #     user_id         = 'oasist'
 #     test_data       = File.join('..', 'csv', 'test_data.csv')
-#     @accuracy_check = AccuracyCheck.new(scheme, host, bot_id, user_id, test_data)
+#     @accuracy_reporter = AccuracyReporter.new(scheme, host, bot_id, user_id, test_data)
 #   end
 
 #   def teardown
@@ -19,11 +19,11 @@
 #   end
 
 #   def test_export_chart
-#     accuracy_check.export_chart(dirname)
+#     accuracy_reporter.export_chart(dirname)
 #     assert Dir[File.join(dirname, 'accuracy_score_chart*.json')].any?
 #   end
 
 #   private
 
-#   attr_reader :accuracy_check
+#   attr_reader :accuracy_reporter
 # end

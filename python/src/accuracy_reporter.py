@@ -7,7 +7,7 @@ sys.path.append('./src/lib')
 sys.path.append('./src/queries')
 
 
-class AccuracyCheck:
+class AccuracyReporter:
     def __init__(
             self,
             scheme: str,

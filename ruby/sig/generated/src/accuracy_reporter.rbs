@@ -1,6 +1,6 @@
-# Generated from src/accuracy_check.rb with RBS::Inline
+# Generated from src/accuracy_reporter.rb with RBS::Inline
 
-class AccuracyCheck
+class AccuracyReporter
   # @rbs scheme: String
   # @rbs host: String
   # @rbs bot_id: String

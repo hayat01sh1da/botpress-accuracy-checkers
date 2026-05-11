@@ -1,6 +1,6 @@
 # rbs_inline: enabled
 
-require_relative '../src/accuracy_check'
+require_relative '../src/accuracy_reporter'
 
 scheme    = 'https'
 host      = 'oasist-botpress-server.herokuapp.com'
@@ -9,6 +9,6 @@ user_id   = 'oasist'
 dirname   = File.join('..', 'csv')
 test_data = File.join(dirname, 'test_data.csv')
 
-accuracy_check = AccuracyCheck.new(scheme, host, bot_id, user_id, test_data)
-accuracy_check.export_chart(dirname)
+accuracy_reporter = AccuracyReporter.new(scheme, host, bot_id, user_id, test_data)
+accuracy_reporter.export_chart(dirname)
 puts "--- Successfully exported accuracy score chart under #{dirname}/ ---"
