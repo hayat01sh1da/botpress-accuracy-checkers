@@ -15,7 +15,8 @@ class DataTrainerTest < ApplicationTest
 
   def test_export
     data_trainer.export(dirname)
-    assert Dir[File.join(dirname, 'training_data*.json')].any?
+
+    assert_predicate Dir[File.join(dirname, 'training_data*.json')], :any?
   end
 
   private
