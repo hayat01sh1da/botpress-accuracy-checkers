@@ -13,10 +13,6 @@ class DataTrainerTest < ApplicationTest
     @data_trainer = DataTrainer.new(data_trainer)
   end
 
-  def teardown
-    super
-  end
-
   def test_export
     data_trainer.export(dirname)
     assert Dir[File.join(dirname, 'training_data*.json')].any?
