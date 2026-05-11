@@ -7,7 +7,7 @@ sys.path.append('./src/lib')
 sys.path.append('./src/queries')
 
 
-class AccuracyCheck:
+class AccuracyReporter:
     def __init__(
             self,
             scheme: str,
@@ -25,7 +25,7 @@ class AccuracyCheck:
         self.res_bodies = self.accuracy_check_query.res_bodies()
         self.chart_drawer = ChartDrawer(self.test_data, self.res_bodies)
 
-    def export_chart(self, dirname: str) -> None:
+    def run(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
             self.chart_drawer.csv(f)
 
@@ -34,4 +34,5 @@ class AccuracyCheck:
     def __filename__(self, dirname: str) -> str:
         return os.path.join(
             dirname, f'accuracy_score_chart_{
-                datetime.datetime.now():%Y%m%d%H%M%S}.csv')
+                datetime.datetime.now():%Y%m%d%H%M%S}.csv'
+        )

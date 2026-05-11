@@ -2,24 +2,24 @@
 
 require_relative './lib/format'
 
-class TrainingData
+class DataTrainer
   include ::Lib::Format
 
-  # @rbs training_data: String
+  # @rbs data_trainer: String
   # @rbs return: void
-  def initialize(training_data)
-    @training_data = training_data
+  def initialize(data_trainer)
+    @data_trainer = data_trainer
   end
 
   # @rbs dirname: String
   # @rbs return: void
   def export(dirname)
-    File.write(filename(dirname), to_json(training_data))
+    File.write(filename(dirname), to_json(data_trainer))
   end
 
   private
 
-  attr_reader :training_data
+  attr_reader :data_trainer
 
   # @rbs dirname: String
   # @rbs return: String

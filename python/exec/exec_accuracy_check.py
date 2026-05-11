@@ -1,4 +1,4 @@
-from accuracy_check import AccuracyCheck
+from accuracy_reporter import AccuracyReporter
 import os
 import sys
 import shutil
@@ -14,8 +14,8 @@ user_id = 'oasist'
 dirname = os.path.join('..', 'csv')
 test_data = os.path.join(dirname, 'test_data.csv')
 
-accuracy_check = AccuracyCheck(scheme, host, bot_id, user_id, test_data)
-accuracy_check.export_chart(dirname)
+accuracy_reporter = AccuracyReporter(scheme, host, bot_id, user_id, test_data)
+accuracy_reporter.run(dirname)
 print(f'--- Successfully exported accuracy score chart under {dirname}/ ---')
 
 pycaches = glob.glob(os.path.join('.', '**', '__pycache__'), recursive=True)

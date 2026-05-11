@@ -5,13 +5,13 @@ import sys
 sys.path.append('./src/lib')
 
 
-class TrainingData:
-    def __init__(self, training_data: str) -> None:
-        self.training_data = training_data
+class DataTrainer:
+    def __init__(self, data_trainer: str) -> None:
+        self.data_trainer = data_trainer
 
     def export(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
-            f.write(__to_json__(self.training_data))
+            f.write(__to_json__(self.data_trainer))
 
     # private
 

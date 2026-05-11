@@ -1,11 +1,11 @@
-# Generated from src/training_data.rb with RBS::Inline
+# Generated from src/data_trainer.rb with RBS::Inline
 
-class TrainingData
+class DataTrainer
   include ::Lib::Format
 
-  # @rbs training_data: String
+  # @rbs data_trainer: String
   # @rbs return: void
-  def initialize: (String training_data) -> void
+  def initialize: (String data_trainer) -> void
 
   # @rbs dirname: String
   # @rbs return: void
@@ -13,7 +13,7 @@ class TrainingData
 
   private
 
-  attr_reader training_data: untyped
+  attr_reader data_trainer: untyped
 
   # @rbs dirname: String
   # @rbs return: String
