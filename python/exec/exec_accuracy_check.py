@@ -15,7 +15,7 @@ dirname = os.path.join('..', 'csv')
 test_data = os.path.join(dirname, 'test_data.csv')
 
 accuracy_reporter = AccuracyReporter(scheme, host, bot_id, user_id, test_data)
-accuracy_reporter.export_chart(dirname)
+accuracy_reporter.run(dirname)
 print(f'--- Successfully exported accuracy score chart under {dirname}/ ---')
 
 pycaches = glob.glob(os.path.join('.', '**', '__pycache__'), recursive=True)

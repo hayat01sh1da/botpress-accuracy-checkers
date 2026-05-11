@@ -17,7 +17,7 @@
 #         self.accuracy_reporter = AccuracyReporter(scheme, host, bot_id, user_id, test_data)
 
 #     def test_export_chart(self):
-#         self.accuracy_reporter.export_chart(self.dirname)
+#         self.accuracy_reporter.report(self.dirname)
 #         self.assertTrue(any(glob.glob('{dirname}/accuracy_score_chart*.csv'.format(dirname = self.dirname))))
 
 # if __name__ == '__main__':

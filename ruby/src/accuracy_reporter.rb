@@ -9,18 +9,30 @@ class AccuracyReporter
   # @rbs bot_id: String
   # @rbs user_id: String
   # @rbs test_data: String
+  # @rbs dirname: String
   # @rbs return: void
-  def initialize(scheme, host, bot_id, user_id, test_data)
+  def self.run(scheme:, host:, bot_id:, user_id:, test_data:, dirname:)
+    new(scheme:, host:, bot_id:, user_id:, test_data:, dirname:).run
+  end
+
+  # @rbs scheme: String
+  # @rbs host: String
+  # @rbs bot_id: String
+  # @rbs user_id: String
+  # @rbs test_data: String
+  # @rbs dirname: String
+  # @rbs return: void
+  def initialize(scheme:, host:, bot_id:, user_id:, test_data:, dirname:)
     @scheme    = scheme
     @host      = host
     @bot_id    = bot_id
     @user_id   = user_id
     @test_data = test_data
+    @dirname   = dirname
   end
 
-  # @rbs dirname: String
   # @rbs return: void
-  def export_chart(dirname)
+  def run
     res_bodies = accuracy_check_query.res_bodies
     csv_chart  = chart_drawer(res_bodies).csv
     File.open(filename(dirname), 'w') { |f| f.puts(csv_chart) }
@@ -28,7 +40,7 @@ class AccuracyReporter
 
   private
 
-  attr_reader :scheme, :host, :bot_id, :user_id, :test_data
+  attr_reader :scheme, :host, :bot_id, :user_id, :test_data, :dirname
 
   # @rbs return: Queries::AccuracyCheckQuery
   def accuracy_check_query

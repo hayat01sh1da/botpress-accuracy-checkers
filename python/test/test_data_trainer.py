@@ -3,8 +3,8 @@ import os
 import glob
 import sys
 sys.path.append('./src')
-from test_application import TestApplication
 from data_trainer import DataTrainer
+from test_application import TestApplication
 
 
 class TestDataTrainer(TestApplication):

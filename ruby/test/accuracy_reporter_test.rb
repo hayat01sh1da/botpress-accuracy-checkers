@@ -8,12 +8,11 @@
 # class AccuracyReporterTest < ApplicationTest
 #   def setup
 #     super
-#     scheme          = 'https'
-#     host            = 'oasist-botpress-server.herokuapp.com'
-#     bot_id          = 'sample-bot'
-#     user_id         = 'oasist'
-#     test_data       = File.join('..', 'csv', 'test_data.csv')
-#     @accuracy_reporter = AccuracyReporter.new(scheme, host, bot_id, user_id, test_data)
+#     @scheme    = 'https'
+#     @host      = 'oasist-botpress-server.herokuapp.com'
+#     @bot_id    = 'sample-bot'
+#     @user_id   = 'oasist'
+#     @test_data = File.join('..', 'csv', 'test_data.csv')
 #   end
 
 #   def teardown
@@ -21,11 +20,11 @@
 #   end
 
 #   def test_export_chart
-#     accuracy_reporter.export_chart(dirname)
-#     assert Dir[File.join(dirname, 'accuracy_score_chart*.json')].any?
+#     AccuracyReporter.run(scheme:, host:, bot_id:, user_id:, test_data:, dirname:)
+#     assert_predicate Dir[File.join(dirname, 'accuracy_score_chart*.json')], :any?
 #   end
 
 #   private
 
-#   attr_reader :accuracy_reporter
+#   attr_reader :scheme, :host, :bot_id, :user_id, :test_data
 # end
