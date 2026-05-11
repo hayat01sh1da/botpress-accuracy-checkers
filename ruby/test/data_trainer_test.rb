@@ -2,7 +2,7 @@
 
 # rbs_inline: enabled
 
-require_relative './application_test'
+require_relative 'application_test'
 require_relative '../src/data_trainer'
 require_relative '../src/lib/format'
 
