@@ -9,3 +9,5 @@ plugins:
 AllCops:
   TargetRubyVersion: 4.0
   NewCops: enable
+Metrics/ParameterLists:
+  Max: 6
