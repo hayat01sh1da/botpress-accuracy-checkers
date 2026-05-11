@@ -5,9 +5,9 @@ import json
 import sys
 sys.path.append('./src/lib')
 sys.path.append('./test')
-from test_application import TestApplication
-from list_handler import __csv_to_dicts__
 from chart_drawer import ChartDrawer
+from list_handler import __csv_to_dicts__
+from test_application import TestApplication
 
 
 class TestChartDrawer(TestApplication):

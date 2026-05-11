@@ -1,4 +1,4 @@
-from training_data import TrainingData
+from data_trainer import DataTrainer
 import os
 import sys
 import shutil
@@ -9,8 +9,8 @@ sys.path.append('./src/lib')
 csv_training_data = os.path.join('..', 'csv', 'training_data.csv')
 dirname = os.path.join('..', 'json')
 
-training_data = TrainingData(csv_training_data)
-training_data.export(dirname)
+data_trainer = DataTrainer(csv_training_data)
+data_trainer.export(dirname)
 print(f'--- Successfully exported JSON training data under {dirname}/ ---')
 
 pycaches = glob.glob(os.path.join('.', '**', '__pycache__'), recursive=True)

@@ -5,9 +5,9 @@ module Lib
     # @rbs return: Hash[Symbol, untyped]
     def template: (?untyped array) -> Hash[Symbol, untyped]
 
-    # @rbs training_data: String
+    # @rbs data_trainer: String
     # @rbs array: Array[untyped]
     # @rbs return: String
-    def to_json: (String training_data, ?Array[untyped] array) -> String
+    def to_json: (String data_trainer, ?Array[untyped] array) -> String
   end
 end

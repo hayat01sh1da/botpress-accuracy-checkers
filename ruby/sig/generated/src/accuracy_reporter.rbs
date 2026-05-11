@@ -1,17 +1,26 @@
-# Generated from src/accuracy_check.rb with RBS::Inline
+# Generated from src/accuracy_reporter.rb with RBS::Inline
 
-class AccuracyCheck
+class AccuracyReporter
   # @rbs scheme: String
   # @rbs host: String
   # @rbs bot_id: String
   # @rbs user_id: String
   # @rbs test_data: String
-  # @rbs return: void
-  def initialize: (String scheme, String host, String bot_id, String user_id, String test_data) -> void
-
   # @rbs dirname: String
   # @rbs return: void
-  def export_chart: (String dirname) -> void
+  def self.run: (scheme: String, host: String, bot_id: String, user_id: String, test_data: String, dirname: String) -> void
+
+  # @rbs scheme: String
+  # @rbs host: String
+  # @rbs bot_id: String
+  # @rbs user_id: String
+  # @rbs test_data: String
+  # @rbs dirname: String
+  # @rbs return: void
+  def initialize: (scheme: String, host: String, bot_id: String, user_id: String, test_data: String, dirname: String) -> void
+
+  # @rbs return: void
+  def run: () -> void
 
   private
 
@@ -24,6 +33,8 @@ class AccuracyCheck
   attr_reader user_id: untyped
 
   attr_reader test_data: untyped
+
+  attr_reader dirname: untyped
 
   # @rbs return: Queries::AccuracyCheckQuery
   def accuracy_check_query: () -> Queries::AccuracyCheckQuery
