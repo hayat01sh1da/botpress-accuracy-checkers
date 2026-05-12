@@ -1,8 +1,24 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
+require_relative '../src/accuracy_reporter'
+
 task default: :test
 
+desc 'Export the accuracy score report to Botpress'
+Rake::Task.define_task(:export_accuracy_report) do
+  scheme    = 'https'
+  host      = 'oasist-botpress-server.herokuapp.com'
+  bot_id    = 'sample-bot'
+  user_id   = 'oasist'
+  dirname   = File.join('..', 'csv')
+  test_data = File.join(dirname, 'test_data.csv')
+
+  AccuracyReporter.run(scheme:, host:, bot_id:, user_id:, test_data:, dirname:)
+  puts "--- Successfully exported accuracy score chart under #{dirname}/ ---"
+end
+
+desc 'Run all tests'
 Rake::TestTask.new do |task|
   task.pattern = File.join('.', '**', '*_test.rb')
 end
