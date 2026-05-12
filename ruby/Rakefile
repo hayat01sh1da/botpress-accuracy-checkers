@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
-require_relative '../src/accuracy_reporter'
-require_relative '../src/data_trainer'
+require_relative 'src/accuracy_reporter'
+require_relative 'src/data_trainer'
 
 task default: :test
 
