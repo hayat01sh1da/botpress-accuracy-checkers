@@ -6,7 +6,7 @@ from chart_drawer import ChartDrawer
 from list_handler import __csv_to_dicts__
 
 
-def test_csv(tmp_dir):
+def test_csv(tmp_dir: str) -> None:
     csv_path = os.path.join('..', 'csv', 'test_data.csv')
     with open(os.path.join('..', 'json', 'res_bodies.json')) as f:
         res_bodies = json.loads(f.read())
