@@ -1,35 +1,21 @@
-import unittest
-import os
 import datetime
 import json
-import sys
-sys.path.append('./src/lib')
-sys.path.append('./test')
+import os
+
 from chart_drawer import ChartDrawer
 from list_handler import __csv_to_dicts__
-from test_application import TestApplication
 
 
-class TestChartDrawer(TestApplication):
-    def setUp(self) -> None:
-        super().setUp()
-        self.csv_path = os.path.join('..', 'csv', 'test_data.csv')
-        json_path = os.path.join('..', 'json', 'res_bodies.json')
-        self.res_bodies = None
-        with open(json_path) as f:
-            self.res_bodies = json.loads(f.read())
-        self.chart_drawer = ChartDrawer(self.csv_path, self.res_bodies)
+def test_csv(tmp_dir: str) -> None:
+    csv_path = os.path.join('..', 'csv', 'test_data.csv')
+    with open(os.path.join('..', 'json', 'res_bodies.json')) as f:
+        res_bodies = json.loads(f.read())
+    chart_drawer = ChartDrawer(csv_path, res_bodies)
 
-    def test_csv(self) -> None:
-        filename = os.path.join(
-            self.dirname, f'accuracy_score_chart_{
-                datetime.datetime.now():%Y%m%d%H%M%S}.csv')
-        with open(filename, 'w') as f:
-            self.chart_drawer.csv(f)
-        test_data = __csv_to_dicts__(self.csv_path)
-        csv_chart = __csv_to_dicts__(filename)
-        self.assertEqual(len(csv_chart), len(test_data))
+    filename = os.path.join(
+        tmp_dir, f'accuracy_score_chart_{datetime.datetime.now():%Y%m%d%H%M%S}.csv',
+    )
+    with open(filename, 'w') as f:
+        chart_drawer.csv(f)
 
-
-if __name__ == '__main__':
-    unittest.main()
+    assert len(__csv_to_dicts__(filename)) == len(__csv_to_dicts__(csv_path))
