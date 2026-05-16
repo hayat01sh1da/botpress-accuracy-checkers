@@ -154,5 +154,4 @@ jobs:
       - uses: ./.github/actions/setup-ruby-on-rails
       - name: Steep
         working-directory: ./ruby-on-rails
-        run: |
-          bundle exec steep check
+        run: bundle exec steep check
