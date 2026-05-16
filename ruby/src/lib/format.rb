@@ -5,6 +5,7 @@ require 'json'
 
 module Lib
   module Format
+    # @rbs array: Array[untyped]
     # @rbs return: Hash[Symbol, untyped]
     def template(array = [])
       {

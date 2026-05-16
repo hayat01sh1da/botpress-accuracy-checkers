@@ -1,5 +1,9 @@
+# rbs_inline: enabled
+
 module Format
-  def template
+  # @rbs array: Array[untyped]
+  # @rbs return: Hash[Symbol, untyped]
+  def template(array = [])
     {
       id: '',
       data: {
@@ -7,10 +11,10 @@ module Format
         contexts: ['sample'],
         enabled: true,
         answers: {
-          ja: []
+          ja: array
         },
         questions: {
-          ja: []
+          ja: array.dup
         },
         redirectFlow: '',
         redirectNode: ''
@@ -18,11 +22,14 @@ module Format
     }
   end
 
-  def to_json(training_data)
-    result = Array.new
-    format = template
+  # @rbs data_trainer: String
+  # @rbs array: Array[untyped]
+  # @rbs return: String
+  def to_json(data_trainer, array = [])
+    result = array
+    format = template(array.dup)
 
-    CSV.foreach(training_data, headers: true) { |training_datum|
+    CSV.foreach(data_trainer, headers: true) { |training_datum|
       if format[:data][:answers][:ja].last == training_datum['Answer']
         format[:data][:questions][:ja] << training_datum['Question']
       else

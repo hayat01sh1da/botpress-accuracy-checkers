@@ -1,0 +1,12 @@
+# Generated from app/controllers/concerns/format.rb with RBS::Inline
+
+module Format
+  # @rbs array: Array[untyped]
+  # @rbs return: Hash[Symbol, untyped]
+  def template: (?Array[untyped] array) -> Hash[Symbol, untyped]
+
+  # @rbs data_trainer: String
+  # @rbs array: Array[untyped]
+  # @rbs return: String
+  def to_json: (String data_trainer, ?Array[untyped] array) -> String
+end

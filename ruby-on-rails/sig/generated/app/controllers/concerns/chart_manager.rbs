@@ -1,0 +1,15 @@
+# Generated from app/controllers/concerns/chart_manager.rb with RBS::Inline
+
+module ChartManager
+  PATH: untyped
+
+  def save_chart: (untyped filename, untyped csv_chart) -> untyped
+
+  def tmp_charts: () -> untyped
+
+  def tmp_chart: () -> untyped
+
+  def matrix_chart: () -> untyped
+
+  def clear_tmp_charts: () -> untyped
+end

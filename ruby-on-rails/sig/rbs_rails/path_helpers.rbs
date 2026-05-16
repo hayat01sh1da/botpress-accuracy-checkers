@@ -1,0 +1,34 @@
+# resolve-type-names: false
+
+interface ::_RbsRailsPathHelpers
+  def rails_info_properties_path: (*untyped) -> ::String
+  def rails_info_routes_path: (*untyped) -> ::String
+  def rails_info_notes_path: (*untyped) -> ::String
+  def rails_info_path: (*untyped) -> ::String
+  def root_path: (*untyped) -> ::String
+  def top_path: (*untyped) -> ::String
+  def new_training_data_path: (*untyped) -> ::String
+  def training_data_download_path: (*untyped) -> ::String
+  def new_score_chart_path: (*untyped) -> ::String
+  def score_chart_path: (*untyped) -> ::String
+  def score_chart_draw_path: (*untyped) -> ::String
+  def score_chart_download_path: (*untyped) -> ::String
+  def rails_info_properties_url: (*untyped) -> ::String
+  def rails_info_routes_url: (*untyped) -> ::String
+  def rails_info_notes_url: (*untyped) -> ::String
+  def rails_info_url: (*untyped) -> ::String
+  def root_url: (*untyped) -> ::String
+  def top_url: (*untyped) -> ::String
+  def new_training_data_url: (*untyped) -> ::String
+  def training_data_download_url: (*untyped) -> ::String
+  def new_score_chart_url: (*untyped) -> ::String
+  def score_chart_url: (*untyped) -> ::String
+  def score_chart_draw_url: (*untyped) -> ::String
+  def score_chart_download_url: (*untyped) -> ::String
+end
+
+module ::ActionController
+  class ::ActionController::Base
+    include ::_RbsRailsPathHelpers
+  end
+end

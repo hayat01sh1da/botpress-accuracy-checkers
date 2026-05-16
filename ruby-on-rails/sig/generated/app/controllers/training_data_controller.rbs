@@ -1,0 +1,17 @@
+# Generated from app/controllers/training_data_controller.rb with RBS::Inline
+
+class TrainingDataController < ApplicationController
+  include Format
+
+  # GET: /training_data/new
+  def new: () -> untyped
+
+  # POST: /training_data/download
+  def download: () -> untyped
+
+  private
+
+  def training_params: () -> untyped
+
+  def filename: () -> untyped
+end
