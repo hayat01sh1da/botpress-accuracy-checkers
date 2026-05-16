@@ -1,5 +1,4 @@
 # Ruby on Rails App
-
 ruby-on-rails/.env
 ruby-on-rails/.gem_rbs_collection/
 ruby-on-rails/.gitignore
@@ -11,5 +10,6 @@ ruby-on-rails/tmp/
 ruby/test/tmp
 
 # Python
-
 python/**/__pycache__/
+python/**/.pytest_cache/
+python/**/.mypy_cache/
