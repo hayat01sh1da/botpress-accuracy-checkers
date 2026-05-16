@@ -9,10 +9,10 @@ module Format
         contexts: ['sample'],
         enabled: true,
         answers: {
-          ja: []
+          ja: [] #: Array[String]
         },
         questions: {
-          ja: []
+          ja: [] #: Array[String]
         },
         redirectFlow: '',
         redirectNode: ''
