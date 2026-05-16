@@ -1,0 +1,17 @@
+# Hand-written signatures that complement the RBS collection and the
+# rbs-inline generated files where upstream RBS is incomplete.
+
+# `CSV#add_row` is an alias of `CSV#<<` and is missing from the csv RBS
+# shipped with the gem collection.
+class CSV
+  def add_row: (::Array[untyped] | ::CSV::Row row) -> self
+end
+
+# `ApplicationForm` includes `ActiveModel::Model`, which provides the
+# `validates` class macro via `ActiveModel::Validations::ClassMethods`.
+# The collection's ActiveModel RBS does not expose that macro through the
+# `ActiveModel::Model` include chain, so declare it here. Subclasses
+# (ScoreChartForm, TrainingDataForm) inherit it on their singleton.
+class ApplicationForm
+  def self.validates: (*untyped) ?{ () -> untyped } -> void
+end

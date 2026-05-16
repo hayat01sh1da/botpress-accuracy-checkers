@@ -1,0 +1,121 @@
+# Hand-written shim for the RSpec / rspec-rails DSL.
+#
+# RSpec has no RBS in the gem collection, and rbs-inline emits nothing for
+# `RSpec.describe ... do ... end` blocks (they are not class/module
+# definitions). Steep evaluates spec file bodies and example/hook blocks
+# with `self` typed as `::Object`, so the DSL, matchers, request helpers
+# and the per-spec `let` helpers are declared here as permissive `untyped`
+# methods on `Object`.
+#
+# This file is loaded only by the `:spec` Steep target, so it never relaxes
+# type checking of application code.
+
+module RSpec
+  def self.describe: (*untyped) ?{ () -> void } -> untyped
+
+  def self.context: (*untyped) ?{ () -> void } -> untyped
+
+  def self.configure: () ?{ (untyped config) -> void } -> untyped
+end
+
+class Object
+  # Route helpers (request specs) — also provided by sig/rbs_rails for
+  # controllers; specs call them with `self` == Object.
+  include ::_RbsRailsPathHelpers
+
+  # `Kernel#__dir__` is `String?` in core RBS (nil only under `eval`), which
+  # is never the case for a real spec file. Narrowed here so the generated
+  # `rails_helper.rb` boilerplate need not be modified.
+  def __dir__: () -> String
+
+  # Example groups
+  def describe: (*untyped) ?{ () -> void } -> untyped
+
+  def context: (*untyped) ?{ () -> void } -> untyped
+
+  # Examples
+  def it: (*untyped) ?{ () -> void } -> untyped
+
+  def xit: (*untyped) ?{ () -> void } -> untyped
+
+  def specify: (*untyped) ?{ () -> void } -> untyped
+
+  # Hooks
+  def before: (*untyped) ?{ () -> void } -> untyped
+
+  def after: (*untyped) ?{ () -> void } -> untyped
+
+  def around: (*untyped) ?{ (untyped example) -> void } -> untyped
+
+  # Helpers / memoized values
+  def let: (untyped name) ?{ () -> untyped } -> untyped
+
+  def let!: (untyped name) ?{ () -> untyped } -> untyped
+
+  def subject: (*untyped) ?{ () -> untyped } -> untyped
+
+  def described_class: () -> untyped
+
+  # Expectations and matchers
+  def expect: (*untyped) ?{ () -> untyped } -> untyped
+
+  def eq: (untyped) -> untyped
+
+  def eql: (untyped) -> untyped
+
+  def include: (*untyped) -> untyped
+
+  def be: (*untyped) -> untyped
+
+  def be_truthy: () -> untyped
+
+  def be_falsey: () -> untyped
+
+  def have_http_status: (untyped) -> untyped
+
+  def match: (untyped) -> untyped
+
+  def change: (*untyped) ?{ () -> untyped } -> untyped
+
+  # Request spec helpers
+  def get: (*untyped) -> untyped
+
+  def post: (*untyped) -> untyped
+
+  def put: (*untyped) -> untyped
+
+  def patch: (*untyped) -> untyped
+
+  def delete: (*untyped) -> untyped
+
+  def response: () -> untyped
+
+  def request: () -> untyped
+
+  # Per-spec `let` / helper methods defined inside example groups. rbs-inline
+  # cannot see them (they live in `RSpec.describe` blocks), so declare the
+  # ones referenced across the suite as untyped.
+  def chart_drawer: () -> untyped
+
+  def csv_chart: () -> untyped
+
+  def csv_path: () -> untyped
+
+  def json_path: () -> untyped
+
+  def test_data: () -> untyped
+
+  def res_bodies: () -> untyped
+
+  def params: () -> untyped
+
+  def source: () -> untyped
+
+  def destination: () -> untyped
+
+  def dirname: () -> untyped
+
+  def file_to_download: () -> untyped
+
+  def postfix: () -> untyped
+end
