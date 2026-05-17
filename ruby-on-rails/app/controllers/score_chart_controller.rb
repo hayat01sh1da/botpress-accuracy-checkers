@@ -22,9 +22,9 @@ class ScoreChartController < ApplicationController
         render :new and return
       end
 
-      chart_drawer = ChartDrawer.new(test_params[:test_data], res_bodies)
+      csv_chart_drawer = CSVChartDrawer.new(test_params[:test_data], res_bodies)
       begin
-        csv_chart = chart_drawer.csv
+        csv_chart = csv_chart_drawer.csv
       rescue NoMethodError
         flash[:alert] = 'BotID, UserID or AccessToken is invalid'
         render :new and return

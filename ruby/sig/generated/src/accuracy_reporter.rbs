@@ -40,8 +40,8 @@ class AccuracyReporter
   def accuracy_check_query: () -> Queries::AccuracyCheckQuery
 
   # @rbs res_bodies: Array[Hash[String, untyped]]
-  # @rbs return: Lib::ChartDrawer
-  def chart_drawer: (Array[Hash[String, untyped]] res_bodies) -> Lib::ChartDrawer
+  # @rbs return: Lib::CSVChartDrawer
+  def csv_chart_drawer: (Array[Hash[String, untyped]] res_bodies) -> Lib::CSVChartDrawer
 
   # @rbs dirname: String
   # @rbs return: String

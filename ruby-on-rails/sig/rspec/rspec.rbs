@@ -95,7 +95,7 @@ class Object
   # Per-spec `let` / helper methods defined inside example groups. rbs-inline
   # cannot see them (they live in `RSpec.describe` blocks), so declare the
   # ones referenced across the suite as untyped.
-  def chart_drawer: () -> untyped
+  def csv_chart_drawer: () -> untyped
 
   def csv_chart: () -> untyped
 

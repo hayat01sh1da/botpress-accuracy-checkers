@@ -1,7 +1,7 @@
-# Generated from src/lib/chart_drawer.rb with RBS::Inline
+# Generated from src/lib/csv_chart_drawer.rb with RBS::Inline
 
 module Lib
-  class ChartDrawer
+  class CSVChartDrawer
     # @rbs test_data: String
     # @rbs res_bodies: Array[Hash[String, untyped]]
     # @rbs return: void

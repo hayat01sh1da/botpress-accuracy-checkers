@@ -1,7 +1,7 @@
 # rbs_inline: enabled
 
 require_relative './queries/accuracy_check_query'
-require_relative './lib/chart_drawer'
+require_relative './lib/csv_chart_drawer'
 
 class AccuracyReporter
   # @rbs scheme: String
@@ -34,7 +34,7 @@ class AccuracyReporter
   # @rbs return: void
   def run
     res_bodies = accuracy_check_query.res_bodies
-    csv_chart  = chart_drawer(res_bodies).csv
+    csv_chart  = csv_chart_drawer(res_bodies).csv
     File.open(filename(dirname), 'w') { |f| f.puts(csv_chart) }
   end
 
@@ -48,9 +48,9 @@ class AccuracyReporter
   end
 
   # @rbs res_bodies: Array[Hash[String, untyped]]
-  # @rbs return: Lib::ChartDrawer
-  def chart_drawer(res_bodies)
-    @chart_drawer ||= ::Lib::ChartDrawer.new(test_data, res_bodies)
+  # @rbs return: Lib::CSVChartDrawer
+  def csv_chart_drawer(res_bodies)
+    @csv_chart_drawer ||= ::Lib::CSVChartDrawer.new(test_data, res_bodies)
   end
 
   # @rbs dirname: String

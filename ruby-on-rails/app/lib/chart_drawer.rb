@@ -2,7 +2,7 @@
 
 require 'csv'
 
-class ChartDrawer
+class CSVChartDrawer
   def initialize(test_data, res_bodies)
     @test_data  = CSV.read(test_data, headers: true)
     @res_bodies = res_bodies

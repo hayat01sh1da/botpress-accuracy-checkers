@@ -3,9 +3,9 @@
 class TrainingDataFormatter
   include ::Lib::Format
 
-  # @rbs data_trainer: String
+  # @rbs csv_training_data: String
   # @rbs return: void
-  def initialize: (String data_trainer) -> void
+  def initialize: (String csv_training_data) -> void
 
   # @rbs dirname: String
   # @rbs return: void
@@ -13,7 +13,7 @@ class TrainingDataFormatter
 
   private
 
-  attr_reader data_trainer: untyped
+  attr_reader csv_training_data: untyped
 
   # @rbs dirname: String
   # @rbs return: String

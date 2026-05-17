@@ -192,7 +192,7 @@ Style/BlockComments:
 Style/BlockDelimiters:
   Exclude:
     - 'app/controllers/concerns/format.rb'
-    - 'app/lib/chart_drawer.rb'
+    - 'app/lib/csv_chart_drawer.rb'
     - 'app/queries/accuracy_check_query.rb'
     - 'spec/request/score_chart_spec.rb'
 
@@ -209,7 +209,7 @@ Style/Documentation:
     - 'app/forms/training_data_form.rb'
     - 'app/helpers/application_helper.rb'
     - 'app/helpers/score_chart_helper.rb'
-    - 'app/lib/chart_drawer.rb'
+    - 'app/lib/csv_chart_drawer.rb'
     - 'app/queries/accuracy_check_query.rb'
     - 'config/application.rb'
     - 'lib/tasks/routes.rake'
@@ -219,7 +219,7 @@ Style/Documentation:
 Style/EmptyLiteral:
   Exclude:
     - 'app/controllers/concerns/format.rb'
-    - 'app/lib/chart_drawer.rb'
+    - 'app/lib/csv_chart_drawer.rb'
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
@@ -227,7 +227,7 @@ Style/EmptyLiteral:
 # SupportedStyles: format, sprintf, percent
 Style/FormatString:
   Exclude:
-    - 'app/lib/chart_drawer.rb'
+    - 'app/lib/csv_chart_drawer.rb'
 
 # Offense count: 44
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -331,7 +331,7 @@ Style/SymbolProc:
 # SupportedStyles: percent, brackets
 Style/WordArray:
   Exclude:
-    - 'app/lib/chart_drawer.rb'
+    - 'app/lib/csv_chart_drawer.rb'
 
 # Offense count: 17
 # This cop supports safe autocorrection (--autocorrect).

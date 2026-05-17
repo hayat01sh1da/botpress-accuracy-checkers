@@ -1,4 +1,4 @@
-from chart_drawer import ChartDrawer
+from csv_chart_drawer import CSVChartDrawer
 from accuracy_check_query import AccuracyCheckQuery
 import os
 import datetime
@@ -23,11 +23,11 @@ class AccuracyReporter:
         self.accuracy_check_query = AccuracyCheckQuery(
             self.scheme, self.host, self.bot_id, self.user_id, self.test_data)
         self.res_bodies = self.accuracy_check_query.res_bodies()
-        self.chart_drawer = ChartDrawer(self.test_data, self.res_bodies)
+        self.csv_chart_drawer = CSVChartDrawer(self.test_data, self.res_bodies)
 
     def run(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
-            self.chart_drawer.csv(f)
+            self.csv_chart_drawer.csv(f)
 
     # private
 
