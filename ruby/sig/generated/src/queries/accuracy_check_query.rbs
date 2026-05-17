@@ -10,7 +10,7 @@ module Queries
     # @rbs user_id: String
     # @rbs test_data: String
     # @rbs return: void
-    def initialize: (String scheme, String host, String bot_id, String user_id, String test_data) -> void
+    def initialize: (String scheme, String host, String bot_id, String user_id, untyped path_to_test_data) -> void
 
     # @rbs return: Array[Hash[String, untyped]]
     def res_bodies: () -> Array[Hash[String, untyped]]

@@ -3,19 +3,19 @@
 class TrainingDataFormatter
   include ::Lib::Format
 
-  # @rbs csv_training_data: String
+  # @rbs path_to_csv_training_data: String
   # @rbs return: void
-  def initialize: (String csv_training_data) -> void
+  def initialize: (String path_to_csv_training_data) -> void
 
-  # @rbs dirname: String
+  # @rbs path_to_json_training_data: String
   # @rbs return: void
-  def export: (String dirname) -> void
+  def export: (String path_to_json_training_data) -> void
 
   private
 
-  attr_reader csv_training_data: untyped
+  attr_reader path_to_csv_training_data: untyped
 
-  # @rbs dirname: String
+  # @rbs path_to_json_training_data: String
   # @rbs return: String
-  def filename: (String dirname) -> String
+  def filename: (String path_to_json_training_data) -> String
 end

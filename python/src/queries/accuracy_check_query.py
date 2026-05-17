@@ -15,12 +15,12 @@ class AccuracyCheckQuery:
             host: str,
             bot_id: str,
             user_id: str,
-            test_data: str) -> None:
+            path_to_test_data: str) -> None:
         self.scheme = re.sub(INVALID_PATTERNS, '', scheme)
         self.host = re.sub(INVALID_PATTERNS, '', host)
         self.bot_id = re.sub(INVALID_PATTERNS, '', bot_id)
         self.user_id = re.sub(INVALID_PATTERNS, '', user_id)
-        self.test_data = __csv_to_dicts__(test_data)
+        self.test_data = __csv_to_dicts__(path_to_test_data)
         self.uri = f'{self.scheme}://{self.host}/api/v1/bots/{self.bot_id}/converse/{self.user_id}/secured?include=suggestions'
 
     def res_bodies(self) -> list[dict[str, Any]]:

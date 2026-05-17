@@ -26,14 +26,14 @@ module Lib
       }
     end
 
-    # @rbs data_trainer: String
+    # @rbs path_to_csv_training_data: String
     # @rbs array: Array[untyped]
     # @rbs return: String
-    def to_json(data_trainer, array = [])
+    def to_json(path_to_csv_training_data, array = [])
       result = array
       format = template(array.dup)
 
-      CSV.foreach(data_trainer, headers: true) { |training_datum|
+      CSV.foreach(path_to_csv_training_data, headers: true) { |training_datum|
         if format[:data][:answers][:ja].last == training_datum['Answer']
           format[:data][:questions][:ja] << training_datum['Question']
         else

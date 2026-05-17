@@ -2,10 +2,10 @@
 
 module Lib
   class CSVChartDrawer
-    # @rbs test_data: String
+    # @rbs path_to_test_data: String
     # @rbs res_bodies: Array[Hash[String, untyped]]
     # @rbs return: void
-    def initialize: (String test_data, Array[Hash[String, untyped]] res_bodies) -> void
+    def initialize: (String path_to_test_data, Array[Hash[String, untyped]] res_bodies) -> void
 
     # @rbs return: String
     def csv: () -> String

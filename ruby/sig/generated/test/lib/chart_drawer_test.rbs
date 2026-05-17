@@ -7,7 +7,7 @@ class CSVChartDrawerTest < Minitest::Test
 
   private
 
-  attr_reader csv_path: untyped
+  attr_reader path_to_test_data: untyped
 
   attr_reader csv_chart_drawer: untyped
 end

@@ -6,12 +6,12 @@ sys.path.append('./src/lib')
 
 
 class TrainingDataFormatter:
-    def __init__(self, csv_training_data: str) -> None:
-        self.csv_training_data = csv_training_data
+    def __init__(self, path_to_csv_training_data: str) -> None:
+        self.path_to_csv_training_data = path_to_csv_training_data
 
     def export(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
-            f.write(__to_json__(self.csv_training_data))
+            f.write(__to_json__(self.path_to_csv_training_data))
 
     # private
 

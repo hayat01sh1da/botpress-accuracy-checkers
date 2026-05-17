@@ -15,12 +15,12 @@ module Queries
     # @rbs user_id: String
     # @rbs test_data: String
     # @rbs return: void
-    def initialize(scheme, host, bot_id, user_id, test_data)
+    def initialize(scheme, host, bot_id, user_id, path_to_test_data)
       @scheme    = scheme.gsub(INVALID_PATTERNS, '')
       @host      = host.gsub(INVALID_PATTERNS, '')
       @bot_id    = bot_id.gsub(INVALID_PATTERNS, '')
       @user_id   = user_id.gsub(INVALID_PATTERNS, '')
-      @test_data = CSV.read(test_data, headers: true)
+      @test_data = CSV.read(path_to_test_data, headers: true)
     end
 
     # @rbs return: Array[Hash[String, untyped]]

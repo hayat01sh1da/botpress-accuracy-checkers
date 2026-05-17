@@ -11,16 +11,16 @@
 # class TestAccuracyCheckQuery(TestApplication):
 #     def setUp(self):
 #         super().setUp()
-#         scheme                    = 'https'
-#         host                      = 'oasist-botpress-server.herokuapp.com'
-#         bot_id                    = 'sample-bot'
-#         user_id                   = 'oasist'
-#         self.csv_path             = os.path.join('..', 'csv', 'test_data.csv')
-#         self.accuracy_check_query = AccuracyCheckQuery(scheme, host, bot_id, user_id, self.csv_path)
+#         scheme = 'https'
+#         host = 'oasist-botpress-server.herokuapp.com'
+#         bot_id = 'sample-bot'
+#         user_id = 'oasist'
+#         self.path_to_test_data = os.path.join('..', 'csv', 'test_data.csv')
+#         self.accuracy_check_query = AccuracyCheckQuery(scheme, host, bot_id, user_id, self.path_to_test_data)
 
 #     def test_csv(self):
 #         res_bodies = self.accuracy_check_query.res_bodies()
-#         test_data  = __csv_to_dicts__(self.csv_path)
+#         test_data = __csv_to_dicts__(self.path_to_test_data)
 #         self.assertEqual(len(res_bodies), len(test_data))
 
 # if __name__ == '__main__':
