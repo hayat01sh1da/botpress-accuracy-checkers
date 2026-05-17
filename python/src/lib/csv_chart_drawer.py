@@ -3,7 +3,7 @@ from typing import Any, TextIO
 from list_handler import __csv_to_dicts__
 
 
-class CSVChartDrawer:
+class CsvChartDrawer:
     def __init__(self, path_to_test_data: str,
                  res_bodies: list[dict[str, Any]]) -> None:
         self.test_data = __csv_to_dicts__(path_to_test_data)

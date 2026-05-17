@@ -48,9 +48,9 @@ class AccuracyReporter
   end
 
   # @rbs res_bodies: Array[Hash[String, untyped]]
-  # @rbs return: Lib::CSVChartDrawer
+  # @rbs return: Lib::CsvChartDrawer
   def csv_chart_drawer(res_bodies)
-    @csv_chart_drawer ||= ::Lib::CSVChartDrawer.new(path_to_test_data, res_bodies)
+    @csv_chart_drawer ||= ::Lib::CsvChartDrawer.new(path_to_test_data, res_bodies)
   end
 
   # @rbs path_to_accuracy_score_chart: String

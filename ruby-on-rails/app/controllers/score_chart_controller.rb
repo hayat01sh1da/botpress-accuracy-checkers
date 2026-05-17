@@ -22,7 +22,7 @@ class ScoreChartController < ApplicationController
         render :new and return
       end
 
-      csv_chart_drawer = CSVChartDrawer.new(test_params[:test_data], res_bodies)
+      csv_chart_drawer = CsvChartDrawer.new(test_params[:test_data], res_bodies)
       begin
         csv_chart = csv_chart_drawer.csv
       rescue NoMethodError

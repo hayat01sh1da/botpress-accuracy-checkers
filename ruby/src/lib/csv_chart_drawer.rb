@@ -3,7 +3,7 @@
 require 'csv'
 
 module Lib
-  class CSVChartDrawer
+  class CsvChartDrawer
     # @rbs path_to_test_data: String
     # @rbs res_bodies: Array[Hash[String, untyped]]
     # @rbs return: void

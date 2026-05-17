@@ -10,7 +10,7 @@ class CSVChartDrawerTest < Minitest::Test
     @path_to_test_data = File.join('..', 'csv', 'test_data.csv')
     path_to_res_bodies = File.join('..', 'json', 'res_bodies.json')
     res_bodies         = File.read(path_to_res_bodies).then { |json| JSON.parse(json) }
-    @csv_chart_drawer  = ::Lib::CSVChartDrawer.new(path_to_test_data, res_bodies)
+    @csv_chart_drawer  = ::Lib::CsvChartDrawer.new(path_to_test_data, res_bodies)
   end
 
   def test_csv
