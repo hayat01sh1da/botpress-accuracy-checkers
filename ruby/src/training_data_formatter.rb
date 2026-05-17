@@ -2,24 +2,24 @@
 
 require_relative './lib/format'
 
-class DataTrainer
+class TrainingDataFormatter
   include ::Lib::Format
 
-  # @rbs data_trainer: String
+  # @rbs csv_training_data: String
   # @rbs return: void
-  def initialize(data_trainer)
-    @data_trainer = data_trainer
+  def initialize(csv_training_data)
+    @csv_training_data = csv_training_data
   end
 
   # @rbs dirname: String
   # @rbs return: void
   def export(dirname)
-    File.write(filename(dirname), to_json(data_trainer))
+    File.write(filename(dirname), to_json(csv_training_data))
   end
 
   private
 
-  attr_reader :data_trainer
+  attr_reader :csv_training_data
 
   # @rbs dirname: String
   # @rbs return: String

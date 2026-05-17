@@ -2,7 +2,7 @@
 
 require 'rake/testtask'
 require_relative 'src/accuracy_reporter'
-require_relative 'src/data_trainer'
+require_relative 'src/training_data_formatter'
 
 task default: :test
 
@@ -19,13 +19,13 @@ Rake::Task.define_task(:export_accuracy_report) do
   puts "--- Successfully exported accuracy score chart under #{dirname}/ ---"
 end
 
-desc 'Convert the CSV test data to JSON format and export'
-Rake::Task.define_task(:convert_test_data) do
+desc 'Format the CSV test data to JSON and export'
+Rake::Task.define_task(:format_test_data) do
   csv_training_data = File.join('..', 'csv', 'training_data.csv')
   dirname           = File.join('..', 'json')
 
-  data_trainer = DataTrainer.new(csv_training_data)
-  data_trainer.export(dirname)
+  training_data_formatter = TrainingDataFormatter.new(csv_training_data)
+  training_data_formatter.export(dirname)
   puts "--- Successfully exported JSON training data under #{dirname}/ ---"
 end
 

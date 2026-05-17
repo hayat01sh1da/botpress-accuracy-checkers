@@ -1,4 +1,4 @@
-from data_trainer import DataTrainer
+from training_data_formatter import TrainingDataFormatter
 import os
 import sys
 import shutil
@@ -7,9 +7,9 @@ sys.path.append('./src')
 sys.path.append('./src/lib')
 
 csv_training_data = os.path.join('..', 'csv', 'training_data.csv')
-dirname = os.path.join('..', 'json')
+dirname           = os.path.join('..', 'json')
 
-data_trainer = DataTrainer(csv_training_data)
+data_trainer = TrainingDataFormatter(csv_training_data)
 data_trainer.export(dirname)
 print(f'--- Successfully exported JSON training data under {dirname}/ ---')
 

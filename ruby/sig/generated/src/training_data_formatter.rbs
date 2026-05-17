@@ -1,6 +1,6 @@
-# Generated from src/data_trainer.rb with RBS::Inline
+# Generated from src/training_data_formatter.rb with RBS::Inline
 
-class DataTrainer
+class TrainingDataFormatter
   include ::Lib::Format
 
   # @rbs data_trainer: String

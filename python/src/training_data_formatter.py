@@ -5,13 +5,13 @@ import sys
 sys.path.append('./src/lib')
 
 
-class DataTrainer:
-    def __init__(self, data_trainer: str) -> None:
-        self.data_trainer = data_trainer
+class TrainingDataFormatter:
+    def __init__(self, csv_training_data: str) -> None:
+        self.csv_training_data = csv_training_data
 
     def export(self, dirname: str) -> None:
         with open(self.__filename__(dirname), 'w') as f:
-            f.write(__to_json__(self.data_trainer))
+            f.write(__to_json__(self.csv_training_data))
 
     # private
 
