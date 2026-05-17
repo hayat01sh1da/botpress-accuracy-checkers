@@ -1,7 +1,7 @@
 # Generated from app/lib/csv_chart_drawer.rb with RBS::Inline
 
-class CSVChartDrawer
-  def initialize: (untyped test_data, untyped res_bodies) -> untyped
+class CsvChartDrawer
+  def initialize: (untyped pat_to_test_data, untyped res_bodies) -> untyped
 
   def csv: () -> untyped
 
