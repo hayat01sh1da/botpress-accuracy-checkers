@@ -99,9 +99,9 @@ class Object
 
   def csv_chart: () -> untyped
 
-  def csv_path: () -> untyped
+  def path_to_test_data: () -> untyped
 
-  def json_path: () -> untyped
+  def path_to_res_bodies: () -> untyped
 
   def test_data: () -> untyped
 
