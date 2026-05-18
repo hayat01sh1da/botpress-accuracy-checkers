@@ -1,17 +1,26 @@
 # rbs_inline: enabled
 
-require 'csv'
-
 class CsvChartDrawer
+  # @rbs path_to_test_data: String
+  # @rbs res_bodies: Array[Hash[String, untyped]]
+  # @rbs return: String
+  def self.run(path_to_test_data:, res_bodies:)
+    new(path_to_test_data:, res_bodies:).run
+  end
+
+  # @rbs path_to_test_data: String
+  # @rbs res_bodies: Array[Hash[String, untyped]]
+  # @rbs return: void
   def initialize(path_to_test_data:, res_bodies:)
     @test_data  = CSV.read(path_to_test_data, headers: true)
     @res_bodies = res_bodies
   end
 
-  def csv
+  # @rbs return: String
+  def run
     CSV.generate(headers:, write_headers: true) { |csv|
       rows.each_with_index { |row, index|
-        csv.add_row([test_data[index]['ID'], test_data[index]['Question']].concat(row))
+        csv << [test_data[index]['ID'], test_data[index]['Question']].concat(row)
       }
     }
   end
@@ -20,10 +29,12 @@ class CsvChartDrawer
 
   attr_reader :test_data, :res_bodies
 
+  # @rbs return: Array[String]
   def headers
     ['ID', 'Test_Data'].concat(test_data['ID'])
   end
 
+  # @rbs return: Array[Array[Hash[String, (String | Float)]]]
   def score_tables
     res_bodies.map { |res_body|
       (0...res_body['suggestions'].length).map { |index|
@@ -36,6 +47,7 @@ class CsvChartDrawer
     }
   end
 
+  # @rbs return: Array[Array[String]]
   def rows
     score_tables.map { |score_table|
       scores = Array.new

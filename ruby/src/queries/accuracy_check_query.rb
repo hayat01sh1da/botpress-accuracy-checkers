@@ -13,7 +13,17 @@ module Queries
     # @rbs host: String
     # @rbs bot_id: String
     # @rbs user_id: String
-    # @rbs test_data: String
+    # @rbs path_to_test_data: String
+    # @rbs return: Array[Hash[String, untyped]]
+    def self.request!(scheme:, host:, bot_id:, user_id:, path_to_test_data:)
+      new(scheme:, host:, bot_id:, user_id:, path_to_test_data:).request!
+    end
+
+    # @rbs scheme: String
+    # @rbs host: String
+    # @rbs bot_id: String
+    # @rbs user_id: String
+    # @rbs path_to_test_data: String
     # @rbs return: void
     def initialize(scheme:, host:, bot_id:, user_id:, path_to_test_data:)
       @scheme    = scheme.gsub(INVALID_PATTERNS, '')
@@ -24,7 +34,7 @@ module Queries
     end
 
     # @rbs return: Array[Hash[String, untyped]]
-    def res_bodies
+    def request!
       authorized
       request.map(&:body).map do |res_body|
         JSON.parse(res_body)
@@ -43,7 +53,7 @@ module Queries
     # @rbs return: void
     def authorized
       @req                 = Net::HTTP::Post.new(uri)
-      @req[:authorization] = ENV['BOTPRESS_ACCESS_TOKEN']
+      @req[:authorization] = ENV.fetch('BOTPRESS_ACCESS_TOKEN', '')
     end
 
     # @rbs return: Array[Net::HTTPResponse]

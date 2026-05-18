@@ -1,9 +1,18 @@
 # Generated from app/lib/csv_chart_drawer.rb with RBS::Inline
 
 class CsvChartDrawer
-  def initialize: (path_to_test_data: untyped, res_bodies: untyped) -> untyped
+  # @rbs path_to_test_data: String
+  # @rbs res_bodies: Array[Hash[String, untyped]]
+  # @rbs return: String
+  def self.run: (path_to_test_data: String, res_bodies: Array[Hash[String, untyped]]) -> String
 
-  def csv: () -> untyped
+  # @rbs path_to_test_data: String
+  # @rbs res_bodies: Array[Hash[String, untyped]]
+  # @rbs return: void
+  def initialize: (path_to_test_data: String, res_bodies: Array[Hash[String, untyped]]) -> void
+
+  # @rbs return: String
+  def run: () -> String
 
   private
 
@@ -11,9 +20,12 @@ class CsvChartDrawer
 
   attr_reader res_bodies: untyped
 
-  def headers: () -> untyped
+  # @rbs return: Array[String]
+  def headers: () -> Array[String]
 
-  def score_tables: () -> untyped
+  # @rbs return: Array[Array[Hash[String, (String | Float)]]]
+  def score_tables: () -> Array[Array[Hash[String, String | Float]]]
 
-  def rows: () -> untyped
+  # @rbs return: Array[Array[String]]
+  def rows: () -> Array[Array[String]]
 end

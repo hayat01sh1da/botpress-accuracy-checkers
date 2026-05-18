@@ -3,8 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe CsvChartDrawer do
-  let(:csv_chart_drawer)   { described_class.new(path_to_test_data:, res_bodies:) }
-  let(:csv_chart)          { csv_chart_drawer.csv }
+  let(:csv_chart)          { described_class.run(path_to_test_data:, res_bodies:) }
   let(:path_to_test_data)  { Rails.root.join('csv/test_data.csv') }
   let(:path_to_res_bodies) { Rails.root.join('json/res_bodies.json') }
   let(:test_data)          { CSV.read(path_to_test_data) }

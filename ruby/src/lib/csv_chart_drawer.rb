@@ -6,6 +6,13 @@ module Lib
   class CsvChartDrawer
     # @rbs path_to_test_data: String
     # @rbs res_bodies: Array[Hash[String, untyped]]
+    # @rbs return: String
+    def self.run(path_to_test_data:, res_bodies:)
+      new(path_to_test_data:, res_bodies:).run
+    end
+
+    # @rbs path_to_test_data: String
+    # @rbs res_bodies: Array[Hash[String, untyped]]
     # @rbs return: void
     def initialize(path_to_test_data:, res_bodies:)
       @test_data  = CSV.read(path_to_test_data, headers: true)
@@ -13,7 +20,7 @@ module Lib
     end
 
     # @rbs return: String
-    def csv
+    def run
       CSV.generate(headers:, write_headers: true) { |csv|
         rows.each_with_index { |row, index|
           csv << [test_data[index]['ID'], test_data[index]['Question']].concat(row)

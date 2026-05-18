@@ -7,5 +7,5 @@ class TrainingDataFormatterTest < ApplicationTest
 
   private
 
-  attr_reader training_data_formatter: untyped
+  attr_reader path_to_csv_training_data: untyped
 end

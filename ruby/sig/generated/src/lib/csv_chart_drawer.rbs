@@ -4,11 +4,16 @@ module Lib
   class CsvChartDrawer
     # @rbs path_to_test_data: String
     # @rbs res_bodies: Array[Hash[String, untyped]]
+    # @rbs return: String
+    def self.run: (path_to_test_data: String, res_bodies: Array[Hash[String, untyped]]) -> String
+
+    # @rbs path_to_test_data: String
+    # @rbs res_bodies: Array[Hash[String, untyped]]
     # @rbs return: void
     def initialize: (path_to_test_data: String, res_bodies: Array[Hash[String, untyped]]) -> void
 
     # @rbs return: String
-    def csv: () -> String
+    def run: () -> String
 
     private
 

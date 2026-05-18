@@ -36,14 +36,8 @@ class AccuracyReporter
 
   attr_reader path_to_accuracy_score_chart: untyped
 
-  # @rbs return: Queries::AccuracyCheckQuery
-  def accuracy_check_query: () -> Queries::AccuracyCheckQuery
+  attr_reader res_bodies: untyped
 
-  # @rbs res_bodies: Array[Hash[String, untyped]]
-  # @rbs return: Lib::CsvChartDrawer
-  def csv_chart_drawer: (res_bodies: Array[Hash[String, untyped]]) -> Lib::CsvChartDrawer
-
-  # @rbs path_to_accuracy_score_chart: String
   # @rbs return: String
-  def filename: (path_to_accuracy_score_chart: String) -> String
+  def filename: () -> String
 end
