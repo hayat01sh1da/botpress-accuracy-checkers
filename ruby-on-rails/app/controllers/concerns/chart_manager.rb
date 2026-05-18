@@ -3,7 +3,7 @@
 module ChartManager
   PATH = Rails.root.join('tmp', 'downloads')
 
-  def save_chart(filename, csv_chart)
+  def save_chart(filename:, csv_chart:)
     Dir.mkdir(PATH) unless Dir.exist?(PATH)
     File.open(PATH.join(filename), 'w') { |f| f.puts(csv_chart) }
   end

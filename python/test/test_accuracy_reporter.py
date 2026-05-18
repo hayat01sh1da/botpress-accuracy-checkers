@@ -9,12 +9,12 @@
 # class TestAccuracyReporter(TestApplication):
 #     def setUp(self):
 #         super().setUp()
-#         scheme              = 'https'
-#         host                = 'oasist-botpress-server.herokuapp.com'
-#         bot_id              = 'sample-bot'
-#         user_id             = 'oasist'
-#         test_data           = os.path.join('..', 'csv', 'test_data.csv')
-#         self.accuracy_reporter = AccuracyReporter(scheme, host, bot_id, user_id, test_data)
+#         scheme = 'https'
+#         host = 'oasist-botpress-server.herokuapp.com'
+#         bot_id = 'sample-bot'
+#         user_id = 'oasist'
+#         path_to_test_data = os.path.join('..', 'csv', 'test_data.csv')
+#         self.accuracy_reporter = AccuracyReporter(scheme, host, bot_id, user_id, path_to_test_data)
 
 #     def test_export_chart(self):
 #         self.accuracy_reporter.report(self.dirname)

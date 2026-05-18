@@ -1,0 +1,28 @@
+# Generated from src/training_data_formatter.rb with RBS::Inline
+
+class TrainingDataFormatter
+  include ::Lib::Format
+
+  # @rbs path_to_csv_training_data: String
+  # @rbs path_to_json_training_data: String
+  # @rbs return: void
+  def self.run: (path_to_csv_training_data: String, path_to_json_training_data: String) -> void
+
+  # @rbs path_to_csv_training_data: String
+  # @rbs path_to_json_training_data: String
+  # @rbs return: void
+  def initialize: (path_to_csv_training_data: String, path_to_json_training_data: String) -> void
+
+  # @rbs return: void
+  def run: () -> void
+
+  private
+
+  attr_reader path_to_csv_training_data: untyped
+
+  attr_reader path_to_json_training_data: untyped
+
+  # @rbs path_to_json_training_data: String
+  # @rbs return: String
+  def filename: () -> String
+end

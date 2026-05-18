@@ -3,10 +3,10 @@ from typing import Any, TextIO
 from list_handler import __csv_to_dicts__
 
 
-class ChartDrawer:
-    def __init__(self, test_data: str,
+class CsvChartDrawer:
+    def __init__(self, path_to_test_data: str,
                  res_bodies: list[dict[str, Any]]) -> None:
-        self.test_data = __csv_to_dicts__(test_data)
+        self.test_data = __csv_to_dicts__(path_to_test_data)
         self.res_bodies = res_bodies
         self.ids = [test_datum['ID'] for test_datum in self.test_data]
         self.questions = [test_datum['Question']

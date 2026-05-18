@@ -4,17 +4,17 @@ require 'minitest/autorun'
 
 class ApplicationTest < Minitest::Test
   def setup
-    @dirname = File.join('test', 'tmp')
-    Dir.mkdir(dirname) unless Dir.exist?(dirname)
+    @path_to_tmp_test_dir = File.join('test', 'tmp')
+    Dir.mkdir(path_to_tmp_test_dir) unless Dir.exist?(path_to_tmp_test_dir)
   end
 
   def teardown
-    files_to_remove = Dir[File.join(dirname, '*')]
+    files_to_remove = Dir[File.join(path_to_tmp_test_dir, '*')]
     FileUtils.rm_rf(files_to_remove) if files_to_remove.any?
-    Dir.delete(dirname)
+    Dir.delete(path_to_tmp_test_dir)
   end
 
   private
 
-  attr_reader :dirname
+  attr_reader :path_to_tmp_test_dir
 end

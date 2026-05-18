@@ -1,0 +1,31 @@
+# Generated from app/lib/csv_chart_drawer.rb with RBS::Inline
+
+class CsvChartDrawer
+  # @rbs path_to_test_data: String
+  # @rbs res_bodies: Array[Hash[String, untyped]]
+  # @rbs return: String
+  def self.run: (path_to_test_data: String, res_bodies: Array[Hash[String, untyped]]) -> String
+
+  # @rbs path_to_test_data: String
+  # @rbs res_bodies: Array[Hash[String, untyped]]
+  # @rbs return: void
+  def initialize: (path_to_test_data: String, res_bodies: Array[Hash[String, untyped]]) -> void
+
+  # @rbs return: String
+  def run: () -> String
+
+  private
+
+  attr_reader test_data: untyped
+
+  attr_reader res_bodies: untyped
+
+  # @rbs return: Array[String]
+  def headers: () -> Array[String]
+
+  # @rbs return: Array[Array[Hash[String, (String | Float)]]]
+  def score_tables: () -> Array[Array[Hash[String, String | Float]]]
+
+  # @rbs return: Array[Array[String]]
+  def rows: () -> Array[Array[String]]
+end

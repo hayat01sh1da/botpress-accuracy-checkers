@@ -5,7 +5,7 @@
     <% @chart&.each do |chart| %>
       <tr>
         <% chart&.each do |row| %>
-          <th class=<%= accuracy(row) %>><%= row %></th>
+          <th class=<%= accuracy(row:) %>><%= row %></th>
         <% end %>
       </tr>
     <% end %>

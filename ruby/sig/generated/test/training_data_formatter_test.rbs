@@ -1,0 +1,11 @@
+# Generated from test/training_data_formatter_test.rb with RBS::Inline
+
+class TrainingDataFormatterTest < ApplicationTest
+  def setup: () -> untyped
+
+  def test_export: () -> untyped
+
+  private
+
+  attr_reader path_to_csv_training_data: untyped
+end

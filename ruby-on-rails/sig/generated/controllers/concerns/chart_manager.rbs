@@ -3,7 +3,7 @@
 module ChartManager
   PATH: untyped
 
-  def save_chart: (untyped filename, untyped csv_chart) -> untyped
+  def save_chart: (filename: untyped, csv_chart: untyped) -> untyped
 
   def tmp_charts: () -> untyped
 

@@ -7,5 +7,5 @@ class ApplicationTest < Minitest::Test
 
   private
 
-  attr_reader dirname: untyped
+  attr_reader path_to_tmp_test_dir: untyped
 end

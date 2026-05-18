@@ -3,10 +3,10 @@
 module Format
   # @rbs array: Array[untyped]
   # @rbs return: Hash[Symbol, untyped]
-  def template: (?Array[untyped] array) -> Hash[Symbol, untyped]
+  def template: (?array: Array[untyped]) -> Hash[Symbol, untyped]
 
-  # @rbs data_trainer: String
+  # @rbs path_to_csv_training_data: String
   # @rbs array: Array[untyped]
   # @rbs return: String
-  def to_json: (String data_trainer, ?Array[untyped] array) -> String
+  def to_json: (path_to_csv_training_data: String, ?array: Array[untyped]) -> String
 end

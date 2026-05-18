@@ -14,23 +14,28 @@ class ScoreChartController < ApplicationController
   def create
     @score_chart_form = ScoreChartForm.new(test_params)
     if @score_chart_form.valid?
-      accuracy_check_query = AccuracyCheckQuery.new(test_params)
       begin
-        res_bodies = accuracy_check_query.res_bodies
+        res_bodies = AccuracyCheckQuery.request!(
+          scheme: @score_chart_form.scheme,
+          host: @score_chart_form.host,
+          bot_id: @score_chart_form.bot_id,
+          user_id: @score_chart_form.user_id,
+          access_token: @score_chart_form.access_token,
+          test_data: @score_chart_form.test_data
+        )
       rescue SocketError
         flash[:alert] = 'Host is invalid'
         render :new and return
       end
 
-      chart_drawer = ChartDrawer.new(test_params[:test_data], res_bodies)
       begin
-        csv_chart = chart_drawer.csv
+        csv_chart = CsvChartDrawer.run(path_to_test_data: @score_chart_form.test_data, res_bodies:)
       rescue NoMethodError
         flash[:alert] = 'BotID, UserID or AccessToken is invalid'
         render :new and return
       end
 
-      save_chart(filename, csv_chart)
+      save_chart(filename:, csv_chart:)
       redirect_to score_chart_draw_url
     else
       render :new
@@ -44,7 +49,7 @@ class ScoreChartController < ApplicationController
 
   #GET: /score_chart/download
   def download
-    send_file(tmp_chart, filename: filename)
+    send_file(tmp_chart, filename:)
   end
 
   private

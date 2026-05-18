@@ -23,11 +23,11 @@ def __template__() -> dict[str, Any]:
     }
 
 
-def __to_json__(csv_training_data: str) -> str:
+def __to_json__(path_to_csv_training_data: str) -> str:
     result = list()
     format = __template__()
 
-    with open(csv_training_data) as f:
+    with open(path_to_csv_training_data) as f:
         data_trainer = csv.DictReader(f)
         for training_datum in data_trainer:
             if format['data']['answers']['ja'][-1] == training_datum['Answer']:
