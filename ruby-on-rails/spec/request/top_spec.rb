@@ -9,7 +9,7 @@ RSpec.describe TopController, type: :request do
     end
 
     it 'returns a successful status code' do
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns a page title' do
