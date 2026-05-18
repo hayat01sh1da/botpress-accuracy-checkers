@@ -10,7 +10,7 @@ RSpec.describe ScoreChartController, type: :request do
     end
 
     it 'returns a successful status code' do
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns a page title' do
@@ -47,7 +47,7 @@ RSpec.describe ScoreChartController, type: :request do
       }
 
       xit 'returns a successful status code' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       xit 'returns a CSV score data download modal' do
@@ -68,7 +68,7 @@ RSpec.describe ScoreChartController, type: :request do
       }
 
       it 'returns a successful status code' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       it 'renders a test score data upload page with error messages for each param' do
@@ -101,7 +101,7 @@ RSpec.describe ScoreChartController, type: :request do
     end
 
     it 'returns a successful status code' do
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns a page title' do
@@ -142,7 +142,7 @@ RSpec.describe ScoreChartController, type: :request do
     end
 
     it 'returns a successful status code' do
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns a score data download modal' do

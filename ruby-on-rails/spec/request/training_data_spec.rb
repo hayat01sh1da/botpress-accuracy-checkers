@@ -10,7 +10,7 @@ RSpec.describe TrainingDataController, type: :request do
     end
 
     it 'returns a successful status code' do
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
     end
 
     it 'returns a page title' do
@@ -35,7 +35,7 @@ RSpec.describe TrainingDataController, type: :request do
       let(:file_to_download) { "training_data_#{postfix}.json" }
 
       xit 'returns a successful status code' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       xit 'returns a JSON training data download modal' do
@@ -47,7 +47,7 @@ RSpec.describe TrainingDataController, type: :request do
       let(:params) { { training_data: nil } }
 
       it 'returns a successful status code' do
-        expect(response).to have_http_status(200)
+        expect(response).to have_http_status(:ok)
       end
 
       it 'renders a CSV training data upload page with an error message' do
