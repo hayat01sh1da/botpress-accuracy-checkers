@@ -14,7 +14,14 @@ class ScoreChartController < ApplicationController
   def create
     @score_chart_form = ScoreChartForm.new(test_params)
     if @score_chart_form.valid?
-      accuracy_check_query = AccuracyCheckQuery.new(**test_params.to_h.symbolize_keys)
+      accuracy_check_query = AccuracyCheckQuery.new(
+        scheme: @score_chart_form.scheme,
+        host: @score_chart_form.host,
+        bot_id: @score_chart_form.bot_id,
+        user_id: @score_chart_form.user_id,
+        access_token: @score_chart_form.access_token,
+        test_data: @score_chart_form.test_data
+      )
       begin
         res_bodies = accuracy_check_query.res_bodies
       rescue SocketError
