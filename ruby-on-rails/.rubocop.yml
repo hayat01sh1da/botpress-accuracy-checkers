@@ -15,3 +15,5 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/**/*'
     - 'node_modules/**/*'
+Metrics/ParameterLists:
+  Max: 6
