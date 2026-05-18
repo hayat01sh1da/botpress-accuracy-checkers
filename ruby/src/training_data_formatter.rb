@@ -7,14 +7,14 @@ class TrainingDataFormatter
 
   # @rbs path_to_csv_training_data: String
   # @rbs return: void
-  def initialize(path_to_csv_training_data)
+  def initialize(path_to_csv_training_data:)
     @path_to_csv_training_data = path_to_csv_training_data
   end
 
   # @rbs path_to_json_training_data: String
   # @rbs return: void
-  def export(path_to_json_training_data)
-    File.write(filename(path_to_json_training_data), to_json(path_to_csv_training_data))
+  def export(path_to_json_training_data:)
+    File.write(filename(path_to_json_training_data:), to_json(path_to_csv_training_data:))
   end
 
   private
@@ -23,7 +23,7 @@ class TrainingDataFormatter
 
   # @rbs path_to_json_training_data: String
   # @rbs return: String
-  def filename(path_to_json_training_data)
+  def filename(path_to_json_training_data:)
     File.join(path_to_json_training_data, "training_data_#{Time.now.strftime('%F%T').gsub(/[:\-]/, '')}.json")
   end
 end

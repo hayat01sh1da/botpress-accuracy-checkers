@@ -12,7 +12,7 @@
 #     bot_id                = 'sample-bot'
 #     user_id               = 'oasist'
 #     @path_to_test_data    = File.join('..', 'csv', 'test_data.csv')
-#     @accuracy_check_query = ::Queries::AccuracyCheckQuery.new(scheme, host, bot_id, user_id, path_to_test_data)
+#     @accuracy_check_query = ::Queries::AccuracyCheckQuery.new(scheme:, host:, bot_id:, user_id:, path_to_test_data:)
 #   end
 
 #   def test_res_bodies

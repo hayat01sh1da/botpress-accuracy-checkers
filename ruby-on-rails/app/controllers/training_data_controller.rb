@@ -12,7 +12,7 @@ class TrainingDataController < ApplicationController
   def download
     @training_data_form = TrainingDataForm.new(training_params)
     if @training_data_form.valid?
-      send_data(to_json(training_params[:training_data]), filename: filename)
+      send_data(to_json(path_to_csv_training_data: @training_data_form.training_data), filename:)
     else
       render :new
     end

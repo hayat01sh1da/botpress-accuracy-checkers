@@ -7,7 +7,7 @@ module Lib
     # @rbs path_to_test_data: String
     # @rbs res_bodies: Array[Hash[String, untyped]]
     # @rbs return: void
-    def initialize(path_to_test_data, res_bodies)
+    def initialize(path_to_test_data:, res_bodies:)
       @test_data  = CSV.read(path_to_test_data, headers: true)
       @res_bodies = res_bodies
     end

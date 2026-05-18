@@ -3,7 +3,7 @@
 class AccuracyCheckQuery
   INVALID_PATTERNS: ::Regexp
 
-  def initialize: (untyped test_params) -> untyped
+  def initialize: (scheme: untyped, host: untyped, bot_id: untyped, user_id: untyped, access_token: untyped, test_data: untyped) -> untyped
 
   def res_bodies: () -> untyped
 

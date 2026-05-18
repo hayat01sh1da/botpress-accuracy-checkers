@@ -15,7 +15,7 @@ module Queries
     # @rbs user_id: String
     # @rbs test_data: String
     # @rbs return: void
-    def initialize(scheme, host, bot_id, user_id, path_to_test_data)
+    def initialize(scheme:, host:, bot_id:, user_id:, path_to_test_data:)
       @scheme    = scheme.gsub(INVALID_PATTERNS, '')
       @host      = host.gsub(INVALID_PATTERNS, '')
       @bot_id    = bot_id.gsub(INVALID_PATTERNS, '')

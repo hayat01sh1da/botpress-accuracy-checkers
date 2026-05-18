@@ -4,13 +4,13 @@ class AccuracyCheckQuery
 
   INVALID_PATTERNS = /[\\\'\|\`\^\"\<\>\)\(\}\{\]\[\;\/\?\:\@\&\=\+\$\,\%\# ]/
 
-  def initialize(test_params)
-    @scheme       = test_params[:scheme]
-    @host         = test_params[:host].gsub(INVALID_PATTERNS, '')
-    @bot_id       = test_params[:bot_id].gsub(INVALID_PATTERNS, '')
-    @user_id      = test_params[:user_id].gsub(INVALID_PATTERNS, '')
-    @access_token = test_params[:access_token].chomp
-    @test_data    = CSV.read(test_params[:test_data], headers: true)
+  def initialize(scheme:, host:, bot_id:, user_id:, access_token:, test_data:)
+    @scheme       = scheme
+    @host         = host.gsub(INVALID_PATTERNS, '')
+    @bot_id       = bot_id.gsub(INVALID_PATTERNS, '')
+    @user_id      = user_id.gsub(INVALID_PATTERNS, '')
+    @access_token = access_token.chomp
+    @test_data    = CSV.read(test_data, headers: true)
   end
 
   def res_bodies

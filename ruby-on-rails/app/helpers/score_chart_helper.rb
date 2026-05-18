@@ -1,7 +1,7 @@
 # rbs_inline: enabled
 
 module ScoreChartHelper
-  def accuracy(row)
+  def accuracy(row:)
     return unless row.include?('%')
     if row.to_f == 0.0
       ''

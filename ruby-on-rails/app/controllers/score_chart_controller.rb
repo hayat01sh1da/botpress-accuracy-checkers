@@ -14,7 +14,7 @@ class ScoreChartController < ApplicationController
   def create
     @score_chart_form = ScoreChartForm.new(test_params)
     if @score_chart_form.valid?
-      accuracy_check_query = AccuracyCheckQuery.new(test_params)
+      accuracy_check_query = AccuracyCheckQuery.new(**test_params.to_h.symbolize_keys)
       begin
         res_bodies = accuracy_check_query.res_bodies
       rescue SocketError
@@ -22,7 +22,7 @@ class ScoreChartController < ApplicationController
         render :new and return
       end
 
-      csv_chart_drawer = CsvChartDrawer.new(test_params[:test_data], res_bodies)
+      csv_chart_drawer = CsvChartDrawer.new(path_to_test_data: @score_chart_form.test_data, res_bodies:)
       begin
         csv_chart = csv_chart_drawer.csv
       rescue NoMethodError
@@ -30,7 +30,7 @@ class ScoreChartController < ApplicationController
         render :new and return
       end
 
-      save_chart(filename, csv_chart)
+      save_chart(filename:, csv_chart:)
       redirect_to score_chart_draw_url
     else
       render :new
@@ -44,7 +44,7 @@ class ScoreChartController < ApplicationController
 
   #GET: /score_chart/download
   def download
-    send_file(tmp_chart, filename: filename)
+    send_file(tmp_chart, filename:)
   end
 
   private

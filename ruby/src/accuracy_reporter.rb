@@ -34,8 +34,8 @@ class AccuracyReporter
   # @rbs return: void
   def run
     res_bodies = accuracy_check_query.res_bodies
-    csv_chart  = csv_chart_drawer(res_bodies).csv
-    File.open(filename(path_to_accuracy_score_chart), 'w') { |f| f.puts(csv_chart) }
+    csv_chart  = csv_chart_drawer(res_bodies:).csv
+    File.open(filename(path_to_accuracy_score_chart:), 'w') { |f| f.puts(csv_chart) }
   end
 
   private
@@ -44,18 +44,18 @@ class AccuracyReporter
 
   # @rbs return: Queries::AccuracyCheckQuery
   def accuracy_check_query
-    @accuracy_check_query ||= ::Queries::AccuracyCheckQuery.new(scheme, host, bot_id, user_id, path_to_test_data)
+    @accuracy_check_query ||= ::Queries::AccuracyCheckQuery.new(scheme:, host:, bot_id:, user_id:, path_to_test_data:)
   end
 
   # @rbs res_bodies: Array[Hash[String, untyped]]
   # @rbs return: Lib::CsvChartDrawer
-  def csv_chart_drawer(res_bodies)
-    @csv_chart_drawer ||= ::Lib::CsvChartDrawer.new(path_to_test_data, res_bodies)
+  def csv_chart_drawer(res_bodies:)
+    @csv_chart_drawer ||= ::Lib::CsvChartDrawer.new(path_to_test_data:, res_bodies:)
   end
 
   # @rbs path_to_accuracy_score_chart: String
   # @rbs return: String
-  def filename(path_to_accuracy_score_chart)
+  def filename(path_to_accuracy_score_chart:)
     File.join(path_to_accuracy_score_chart, "accuracy_score_chart_#{Time.now.strftime('%F%T').gsub(/[:\-]/, '')}.csv")
   end
 end
