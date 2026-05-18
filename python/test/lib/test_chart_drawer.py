@@ -13,8 +13,8 @@ def test_csv(tmp_dir: str) -> None:
     chart_drawer = ChartDrawer(csv_path, res_bodies)
 
     filename = os.path.join(
-        tmp_dir, f'accuracy_score_chart_{datetime.datetime.now():%Y%m%d%H%M%S}.csv',
-    )
+        tmp_dir, f'accuracy_score_chart_{
+            datetime.datetime.now():%Y%m%d%H%M%S}.csv', )
     with open(filename, 'w') as f:
         chart_drawer.csv(f)
 

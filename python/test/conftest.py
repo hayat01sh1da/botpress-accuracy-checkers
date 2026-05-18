@@ -1,3 +1,4 @@
+import pytest
 import glob
 import os
 import shutil
@@ -9,16 +10,19 @@ sys.path.append('./src/lib')
 sys.path.append('./src/queries')
 
 
-import pytest
-
-
 @pytest.fixture(autouse=True)
-def _cleanup_pycaches() -> Iterator[None]:
-    before = set(glob.glob(os.path.join('.', '**', '__pycache__'), recursive=True))
+def __cleanup_caches__() -> Iterator[None]:
+    caches = set(
+        glob.glob(
+            os.path.join(
+                '.',
+                '**',
+                '.*py.*cache.*'),
+            recursive=True))
     yield
-    for pycache in before:
-        if os.path.exists(pycache):
-            shutil.rmtree(pycache)
+    for cache in caches:
+        if os.path.exists(cache):
+            shutil.rmtree(cache)
 
 
 @pytest.fixture
